@@ -1,0 +1,11 @@
+<!-- bubbles.component.html -->
+<div class="bubbles-container">
+    <div *ngFor="let bubble of bubbles" 
+         class="bubble" 
+         [style.width.px]="bubble.size" 
+         [style.height.px]="bubble.size" 
+         [style.left]="bubble.left"
+         [style.top]="bubble.top"
+         [style.animationDuration]="bubble.duration">
+    </div>
+</div>

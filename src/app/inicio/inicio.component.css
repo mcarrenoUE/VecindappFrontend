@@ -1,0 +1,190 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f4f4f9;
+  margin: 0;
+  padding: 0;
+}
+
+header img {
+  width: 120px;
+  height: auto;
+}
+
+header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 14px 30px;
+  background-color: hsl(0, 0%, 100%);
+  color: white;
+  height: 80px;
+  overflow: hidden;
+}
+
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start; /* Alinea los elementos en la parte superior */
+  justify-content: space-between;
+  padding: 50px;
+  height: calc(100vh - 80px);
+}
+
+.form-container {
+  width: 50%;
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px hwb(239 18% 37% / 0.671);
+  margin-top: 20px; /* Asegura separación entre secciones */
+  transform: translateY(-110px); /* Ajusta la posición más cerca del h2 */
+  
+}
+
+
+
+.form-container h1 {
+  margin-bottom: 20px;
+  color: hsl(239, 77%, 50%);
+  font-weight: 600;
+  text-align: center;
+  
+}
+
+.btn-primary {
+  background-color: #0a0099;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #4167D9;
+}
+
+.image-container {
+  position: relative;
+  text-align: center;
+  width: 45%;
+}
+
+.register-box .worker-link {
+  display: block;
+  text-align:center;
+  margin-top: 15px;
+  color: #0a0099;
+  text-decoration: line;
+}
+.register-box .worker-link:hover {
+  text-decoration: underline;
+}
+
+
+.image-container img {
+  width: 79%;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  transform: translateY(-100px); /* Ajusta la posición más cerca del h2 */
+}
+
+.options {
+  font-size: 12px; /* Ajusta el tamaño de la fuente a 12px */
+  line-height: 1.5; /* Espaciado entre líneas */
+}
+
+.options a {
+  color: #007bff; /* Color del enlace */
+  text-decoration: none; /* Sin subrayado */
+}
+
+.options a:hover {
+  text-decoration: underline; /* Subrayar al pasar el ratón */
+}
+
+
+
+
+/*   BURBUJITAS EN LA PANTALLA, SE REALIZAN CON DIV  */
+/* General styles for blobs */
+.blob {
+  position: absolute;
+  background-color: #4167D9;
+  /* Color base */
+  border-radius: 50%;
+  opacity: 0.8;
+
+}
+
+
+/* Blob 2 */
+.blob-2 {
+  width: 200px;
+  height: 200px;
+  bottom: -70px;
+  right: -70px;
+  background-color: #439FD9;
+  /* Color más claro */
+
+}
+
+/* Blob 3 */
+.blob-3 {
+  width: 120px;
+  height: 120px;
+  top: 100px;
+  right: 80px;
+  background-color: #439FD9;
+  /* Tono más suave */
+
+}
+
+/* Blob 4 */
+.blob-4 {
+  width: 180px;
+  height: 180px;
+  bottom: 0;
+  left: 20px;
+  background-color: #439FD9;
+  z-index: -10;
+}
+
+/* Blob 5 */
+.blob-5 {
+  width: 50px;
+  height: 50px;
+  top: 20%;
+  left: 5%;
+  transform: translate(-50%, -50%);
+  background-color: #4167D9;
+  z-index: 10;
+}
+
+/* Blob 6 */
+.blob-6 {
+  width: 40px;
+  height: 40px;
+  top: 5%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+  background-color: #4167D9;
+  z-index: 1;
+}
+.blob-7{
+  width: 60px;
+  height: 60px;
+  top: 60%;
+  left: 85%;
+  transform: translate(-50%, -50%);
+  background-color: #4167D9;
+  z-index: 10;
+}
+
+.blob-8{
+  width: 30px;
+  height: 30px;
+  top: 60%;
+  right: 45%;
+  background-color: #4167D9;
+  transform: translate(-10%, 60%);
+  z-index: 10;
+}
+

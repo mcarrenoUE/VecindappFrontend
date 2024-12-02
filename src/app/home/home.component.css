@@ -1,0 +1,203 @@
+.container {
+    display: flex;
+    justify-content: space-between; /* Espacio entre las secciones */
+    align-items: center; /* Centra verticalmente */
+    padding: 10px; /* Espaciado interno */
+   
+}
+
+/* .left-section {
+    display:block;
+    justify-content:flex-end; /* Alinea la imagen a la derecha */
+ /*    flex: 1; /* Permite que esta sección ocupe el espacio restante */
+/* }
+
+.right-section {
+    display: flex;
+    flex-direction: column; /* Coloca el contenido en columna */
+/*     flex: 2;} /* Permite que esta sección ocupe más espacio que la izquierda */
+
+
+
+.content {
+    text-align: left; /* Alinea el texto a la izquierda */
+}
+
+  .header .logo {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    width: 180px;
+    height: auto;
+  }
+  
+  .content h1 {
+    font-size: 2.5rem;
+    color: #503fc3;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  
+  .content p {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+    
+  }
+  
+  .buttons {
+    display: flex;
+    justify-content:center;
+    gap: 15px;
+  }
+  
+  .btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-align: center;
+  }
+  
+  .btn.buscar {
+    background-color: #503fc3;
+    color: white;
+  }
+  
+  .btn.buscar:hover {
+    background-color: #fcfcfd;
+    color: #0000e4;
+    border: 2px solid #0000e4;
+  }
+  
+  .btn.ofrecer {
+    background-color: #f8f9fd;
+    color: #503fc3;
+    border: 2px solid #503fc3;
+  }
+  
+  .btn.ofrecer:hover {
+    background-color: #BA69EC;
+    color: white;
+    border-color: #BA69EC;
+  }
+
+
+
+ /*   BURBUJITAS EN LA PANTALLA, SE REALIZAN CON DIV  */
+/* General styles for blobs */
+.blob {
+    position: absolute;
+    background-color: #4167D9; /* Color base */
+    border-radius: 50%;
+    opacity: 0.8;
+    
+  }
+ 
+  /* Blob 1 */
+  .blob-1 {
+    width: 250px;
+    height: 250px;
+    top: -50px;
+    left: -50px;
+    
+  }
+  
+  /* Blob 2 */
+  .blob-2 {
+    width: 200px;
+    height: 200px;
+    bottom: -70px;
+    right: -70px;
+    background-color: #4167D9; /* Color más claro */
+  }
+  
+  /* Blob 3 */
+  .blob-3 {
+    width: 120px;
+    height: 120px;
+    top: 100px;
+    right: 30px;
+    background-color: #4167D9; /* Tono más suave */
+  }
+  
+  /* Blob 4 */
+  .blob-4 {
+    width: 180px;
+    height: 180px;
+    bottom: 0;
+    left: 20px;
+    background-color: #4167D9;
+    z-index: -1;
+  }
+  
+  /* Blob 5 */
+  .blob-5 {
+    width: 140px;
+    height: 140px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #4167D9;
+    z-index: -1; /* Detrás del contenido */
+  }
+  
+
+
+/* Estilo al pasar el mouse */
+.blob.hover {
+  background-color: #BA69EC;
+}
+
+button.btn.ofrecer.hover {
+  background-color: #BA69EC;
+  transition: all 0.3s ease;
+}
+
+
+
+button.btn.buscar.hover {
+  background-color: #BA69EC;
+  color: white;
+}
+
+.dynamic-image {
+  width: 65%;
+  border-radius: 10px;
+
+  transition: all 0.3s ease;
+}
+.image-container {
+  position: relative;
+  width: 600px; 
+  height: 525px; 
+  overflow: hidden; 
+  text-align: center;
+  transition: all 0.3s ease;
+}
+.left-section, .right-section {
+  display: inline-block; 
+  vertical-align: top; 
+  width: 48%; 
+  transition: all 0.3s ease;
+}
+
+.left-section {
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.right-section {
+  text-align: left;
+  transition: all 0.3s ease;
+}
+
+
+
+
+
+
+

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diseño Similar</title>
+
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/vecindapp.png" alt="Logo" />
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Servicios</a></li>
+                <li><a href="#">Sobre nosotros</a></li>
+                <li><a href="#">Trabaja con nosotros</a></li>
+            </ul>
+        </nav>
+        <div class="botones-container">
+            <button class="btn-iniciar-sesion" [routerLink]="['/iniciotrabajador']">Iniciar Sesión</button>
+            <button class="btn-registrarse"[routerLink]="['/registrotrabajador']">Registrarse</button>
+        </div>
+    </header>
+
+    <main>
+        <div class="main-content">
+            <div class="right-section">
+                <div class="blob blob-2"></div>
+            </div>
+        </div>
+        <div class="overlay-content">
+            <div class="text-section">
+                <h1 class="title">¿Las uñas más lindas?</h1>
+                <h2 class="subtitle">¿Encantador de perros?</h2>
+                <h3 class="subtitle1">¿Un buen constructor?</h3>
+            </div>
+            <div class="images-section">
+                <img src="images/lista.png" alt="">
+            </div>
+        </div>
+        <div class="decorations">
+            <div class="blob blob-2"></div>
+            <div class="blob blob-3"></div>
+            <div class="blob blob-4"></div>
+            <div class="blob blob-5"></div>
+            <div class="blob blob-6"></div>
+        </div>
+    </main>
+
+    <div class="seccion">
+        <h1 class="gradient-text">
+            ¿Por qué trabajar con VECINDAPP?
+        </h1>
+        <section class="image-gallery">
+            <div class="gallery-item">
+                <img src="images/trabajo1.png" alt="Imagen 1" />
+                <h3 class="gradient-text">Clientes locales a tu alcance.</h3>
+            </div>
+            <div class="gallery-item">
+                <img src="images/trabajo2.png" alt="Imagen 2" />
+                <h3 class="gradient-text">Horarios flexibles, tú decides.</h3>
+            </div>
+            <div class="gallery-item">
+                <img src="images/trabajo3.png" alt="Imagen 3" />
+                <h3 class="gradient-text">Reseñas que te hacen destacar.</h3>
+            </div>
+        </section>
+    </div>
+
+<div class="seccion2">
+    <section class="image1-gallery">
+        <div class="">
+            <img src="images/trabajo4.png" alt="Imagen 6" />
+        </div>
+        <div class="bitcoin-imagen">
+    <img class="bitcoin-1" src="images/bitcoin.png" alt="bitcoin1" />
+    <img class="bitcoin-2" src="images/bitcoin.png" alt="bitcoin2" />
+    <img class="bitcoin-3" src="images/bitcoin.png" alt="bitcoin3" />
+    <img class="bitcoin-4" src="images/bitcoin.png" alt="bitcoin4" />
+    <img class="bitcoin-5" src="images/bitcoin.png" alt="bitcoin5" />
+    <img class="bitcoin-6" src="images/bitcoin.png" alt="bitcoin6" />
+</div>
+    </section>
+</div><br><br><br><br><br><br>
+
+
+    <h2 class="gradient2-text">
+        Gana hasta 4’000.000 <p></p>
+Solo usando tus habilidades 
+    </h2><br><br><br><br>
+
+<div class="btn-final">
+    <button class="btn-final" [routerLink]="['/iniciotrabajador']"> Usar Vecindapp</button>
+</div> <br><br>
+   
+
+ 
+</body>
+
+<footer style="background-color: #BA69EC;" class="text-white py-3">
+    <div class="text-center">
+        <p [innerText]="getPolicities()" class="mb-0"></p>
+        <small class="text-white">© HECHO CON ♥</small>
+    </div>
+</footer>
+</html>
+

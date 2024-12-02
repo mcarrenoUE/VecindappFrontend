@@ -1,0 +1,83 @@
+<header>
+    <div class="logo">
+        <img src="images/vecindapp.png" alt="Logo" />
+    </div>
+    <nav>
+        <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Servicios</a></li>
+            <li><a [routerLink]="['/sobre-nosotros']">Sobre nosotros</a></li>
+            <li><a href="#">Trabaja con nosotros</a></li>
+        </ul>
+    </nav>
+    <div class="botones-container">
+        <button class="btn-iniciar-sesion"[routerLink]="['/inicio']">Iniciar Sesión</button>
+        <button class="btn-registrarse"[routerLink]="['/registro']">Registrarse</button>
+    </div>
+</header>
+
+<section class="about-us py-5">
+  <div class="container">
+      <div class="row align-items-center">
+          <div class="col-md-4 text-center">
+              <img src="\images\vecindapp.png" alt="Logo de VecindApp" class="img-fluid logo">
+          </div>
+          <div class="col-md-8">
+              <h2 class="title">¡Bienvenidos a VecindApp!</h2>
+              <p class="description">
+                  VecindApp conecta a tu comunidad con servicios independientes. Encuentra talento local para cualquier necesidad, desde un manicurista hasta un electricista. ¡Somos el puente entre la demanda y el talento!
+              </p>
+          </div>
+      </div>
+  </div>
+</section>
+
+<section class="generate-work py-5">
+  <div class="container">
+      <div class="row align-items-center">
+          <div class="col-md-6">
+              <img src="\images\trabajo1.png" alt="Generando trabajo" class="img-fluid float-image">
+          </div>
+          <div class="col-md-6">
+              <h2 class="title">Generamos Trabajo</h2>
+              <p class="description">
+                  En VecindApp ayudamos a miles de profesionales independientes a conectar con clientes cerca de ellos. Ya no necesitan invertir grandes recursos en publicidad: nosotros los acercamos a quienes necesitan sus servicios. ¡Una comunidad apoyando a otra!
+              </p>
+          </div>
+      </div>
+  </div>
+</section>
+
+<section class="help-people py-5">
+  <div class="container">
+      <div class="row align-items-center">
+          <div class="col-md-6 order-md-2">
+              <img src="\images\herramientas.png" alt="Ayudando a la gente" class="img-fluid fade-in-image">
+          </div>
+          <div class="col-md-6 order-md-1">
+              <h2 class="title">Ayudamos a las Personas</h2>
+              <p class="description">
+                  Desde necesidades diarias como pasear a tu mascota, hasta emergencias como arreglar una fuga en casa, VecindApp te conecta con personas confiables y calificadas. ¡Soluciones rápidas, seguras y cerca de ti!
+              </p>
+          </div>
+      </div>
+  </div>
+</section>
+
+<section class="strengthen-community py-5">
+  <div class="container">
+      <div class="row align-items-center">
+          <div class="col-md-6">
+              <img src="\images\comunidad.png" alt="Fortaleciendo la comunidad" class="img-fluid slide-image">
+          </div>
+          <div class="col-md-6">
+              <h2 class="title">Fortalecemos la Comunidad</h2>
+              <p class="description">
+                  VecindApp no solo conecta servicios, sino que crea lazos. Al utilizar nuestra plataforma, contribuyes a un ecosistema de apoyo mutuo en el vecindario. ¡La unión hace la fuerza!
+              </p>
+          </div>
+      </div>
+  </div>
+</section>
+
+<app-footer></app-footer>

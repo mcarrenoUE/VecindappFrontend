@@ -1,0 +1,340 @@
+/* Estilos globales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #4167D9;
+    color: white;
+    height: 80px;
+    overflow: hidden;
+}
+
+header .logo img {
+    height: 90%;
+    max-height: 100px;
+
+}
+
+header nav {
+    padding: 10px 30px;
+    border-radius: 8px;
+    border: #333;
+}
+
+header nav ul {
+    display: flex;
+    list-style: none;
+    gap: 50px;
+    text-align: center;
+
+}
+
+header nav ul li {
+    position: relative;
+    /* Para el efecto de subrayado */
+
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    text-align: center;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+
+}
+
+.botones-container {
+    display: flex;
+    gap: 20px;
+
+}
+
+header .btn-iniciar-sesion,
+header .btn-registrarse {
+    padding: 12px 20px;
+    background-color: #ffffff;
+    color: #4167D9;
+    border: 1px solid #ffffff;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+
+}
+
+/* Cambiar el fondo del header al pasar el mouse sobre los enlaces del nav */
+header nav ul li a:hover,
+header .btn-iniciar-sesion:hover,
+header .btn-registrarse:hover {
+    background-color: #BA69EC;
+}
+
+header .btn-iniciar-sesion:hover,
+header .btn-registrarse:hover {
+    background-color: #4167D9;
+    color: #ffffff;
+    border-color: #ffffff;
+}
+
+
+/* Configuración principal del contenedor */
+main {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #d4a3f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Fondo diagonal */
+.main-content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    clip-path: polygon(0 0, 100% 0, 0 100%);
+    background-color: #f4f4f5ef;
+    z-index: 1;
+
+}
+
+/* Contenido superpuesto */
+.overlay-content {
+    position: absolute;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+
+}
+
+.images-section {
+    flex: 1;
+    text-align: left;
+}
+
+.images-section img {
+    display: block;
+    margin: 0;
+}
+
+.text-section {
+    flex: 1;
+    z-index: 10;
+    color: hwb(268 1% 26%);
+}
+
+.title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #5800fc;
+    margin: 0;
+    padding: 100px 0 0;
+    /* Añade 20px de padding en la parte superior */
+}
+
+.subtitle {
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: rgb(0, 4, 252);
+
+}
+
+
+/*   BURBUJITAS EN LA PANTALLA, SE REALIZAN CON DIV  */
+/* General styles for blobs */
+.blob {
+    position: absolute;
+    background-color: #4167D9;
+    /* Color base */
+    border-radius: 50%;
+    opacity: 0.8;
+
+}
+
+
+/* Blob 2 */
+.blob-2 {
+    width: 200px;
+    height: 200px;
+    bottom: -70px;
+    right: -70px;
+    background-color: #4167D9;
+    /* Color más claro */
+
+}
+
+/* Blob 3 */
+.blob-3 {
+    width: 120px;
+    height: 120px;
+    top: 100px;
+    right: 30px;
+    background-color: #4167D9;
+    /* Tono más suave */
+
+}
+
+/* Blob 4 */
+.blob-4 {
+    width: 180px;
+    height: 180px;
+    bottom: 0;
+    left: 20px;
+    background-color: #4167D9;
+    z-index: 10;
+}
+
+/* Blob 5 */
+.blob-5 {
+    width: 50px;
+    height: 50px;
+    top: 10%;
+    left: 10%;
+    transform: translate(-50%, -50%);
+    background-color: #4167D9;
+    z-index: 10;
+}
+
+/* Blob 6 */
+.blob-6 {
+    width: 70px;
+    height: 70px;
+    top: 30%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    background-color: #9c00e44d;
+    z-index: 10;
+}
+
+
+
+/* Contenedor principal de la sección */
+.seccion2 {
+    text-align: center;
+    padding: 20px;
+    background-color: #f5f5f5;
+
+}
+
+/* Estilo del título */
+.seccion2 h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding: 50px;
+}
+
+/* Estilo de texto con gradiente */
+.gradient-text {
+    background: linear-gradient(335deg, #0846ff, #9b1dc5);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 56px;
+
+
+}
+
+/* Contenedor de la galería */
+.image-gallery {
+    display: flex;
+    justify-content: center;
+    /* Centra las tarjetas horizontalmente */
+    align-items: stretch;
+    /* Alinea las tarjetas al mismo nivel vertical */
+    gap: 20px;
+    /* Espaciado entre tarjetas */
+    flex-wrap: wrap;
+    /* Permite que las tarjetas bajen si la pantalla es pequeña */
+}
+
+/* Estilo de cada tarjeta */
+.gallery-item {
+    background-color: #6291ce63;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    padding: 15px;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+
+}
+
+/* Estilo de las imágenes dentro de las tarjetas */
+.gallery-item img {
+    width: 80%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 30px;
+    padding: 20px;
+    overflow: hidden;
+}
+
+/* Estilo del texto dentro de las tarjetas */
+.gallery-item h3 {
+    padding: 10;
+    font-size: 1.9rem;
+    margin: 10;
+    margin-bottom: 10px;
+}
+
+.btn-final {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.btn-final button {
+    background-color: #4167D9;
+    border: none;
+    border-radius: 25px;
+    padding: 10px 25px;
+    font-size: 1.2rem;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn-final button:hover {
+    background-color: #4167D9;
+    transform: scale(1.05);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
