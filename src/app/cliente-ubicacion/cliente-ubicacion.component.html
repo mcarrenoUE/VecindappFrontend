@@ -1,0 +1,69 @@
+<div class="ubicacion-form">
+  <h2>Ubicación del Cliente</h2>
+  <form (ngSubmit)="onSubmit()" #ubicacionForm="ngForm">
+    <!-- Dirección -->
+    <div>
+      <label for="direccion">Dirección:</label>
+      <input
+        type="text"
+        id="direccion"
+        name="direccion"
+        [(ngModel)]="ubicacion.direccion"
+        required
+        pattern="^[a-zA-Z0-9\s#-]+$"
+      />
+      <small *ngIf="ubicacionForm.form.controls['direccion']?.invalid && ubicacionForm.form.controls['direccion']?.touched">
+        Dirección no válida.
+      </small>
+    </div>
+
+    <!-- Barrio -->
+    <div>
+      <label for="barrio">Barrio:</label>
+      <input
+        type="text"
+        id="barrio"
+        name="barrio"
+        [(ngModel)]="ubicacion.barrio"
+        required
+        pattern="^[a-zA-Z\s]+$"
+      />
+      <small *ngIf="ubicacionForm.form.controls['barrio']?.invalid && ubicacionForm.form.controls['barrio']?.touched">
+        Solo se permiten letras.
+      </small>
+    </div>
+
+    <!-- Localidad -->
+    <div>
+      <label for="localidad">Localidad:</label>
+      <select
+        id="localidad"
+        name="localidad"
+        [(ngModel)]="ubicacion.localidad"
+        required
+      >
+        <option *ngFor="let localidad of localidades" [value]="localidad">
+          {{ localidad }}
+        </option>
+      </select>
+    </div>
+
+    <!-- Ciudad -->
+    <div>
+      <label for="ciudad">Ciudad:</label>
+      <select
+        id="ciudad"
+        name="ciudad"
+        [(ngModel)]="ubicacion.ciudad"
+        required
+      >
+        <option *ngFor="let ciudad of ciudades" [value]="ciudad">
+          {{ ciudad }}
+        </option>
+      </select>
+    </div>
+
+    <!-- Botón de guardar -->
+    <button type="submit" [disabled]="ubicacionForm.invalid">Guardar</button>
+  </form>
+</div>

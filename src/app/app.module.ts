@@ -10,12 +10,16 @@ import { BubblesComponent } from './bubbles/bubbles.component';
 import { BuscarServiciosComponent } from './buscar-servicios/buscar-servicios.component';
 import { OfrecerServiciosComponent } from './ofrecer-servicios/ofrecer-servicios.component';
 import { FooterComponent } from './footer/footer.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { IniciotrabajadorComponent } from './iniciotrabajador/iniciotrabajador.component';
 import { RegistrotrabajadorComponent } from './registrotrabajador/registrotrabajador.component';
 import { environment } from '../environment';
 import { SobreNosotrosComponent } from './sobre-nosotros/sobre-nosotros.component';
-import { IngresoclienteComponent } from './ingresocliente/ingresocliente.component';
+import { ClienteUbicacionComponent } from './cliente-ubicacion/cliente-ubicacion.component';
+import { IngresoClienteComponent } from './ingreso-cliente/ingreso-cliente.component';
+import { TrabajaNosotrosComponent } from './trabaja-nosotros/trabaja-nosotros.component';
+
+
 
 
 
@@ -32,15 +36,22 @@ import { IngresoclienteComponent } from './ingresocliente/ingresocliente.compone
     IniciotrabajadorComponent,
     RegistrotrabajadorComponent,
     SobreNosotrosComponent,
-    IngresoclienteComponent
+    ClienteUbicacionComponent,
+    IngresoClienteComponent,
+    TrabajaNosotrosComponent,
+   
+    
   ],
   imports: [
+
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
+    FormsModule
 
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+ 
 })
 export class AppModule { }

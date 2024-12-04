@@ -9,7 +9,11 @@ import { FooterComponent } from './footer/footer.component'
 import { IniciotrabajadorComponent } from './iniciotrabajador/iniciotrabajador.component';
 import { RegistrotrabajadorComponent } from './registrotrabajador/registrotrabajador.component';
 import { SobreNosotrosComponent } from './sobre-nosotros/sobre-nosotros.component';
-import { IngresoclienteComponent } from './ingresocliente/ingresocliente.component';
+import { ClienteUbicacionComponent } from './cliente-ubicacion/cliente-ubicacion.component';
+import { IngresoClienteComponent } from './ingreso-cliente/ingreso-cliente.component';
+import { TrabajaNosotrosComponent } from './trabaja-nosotros/trabaja-nosotros.component';
+
+
 
 const routes: Routes = [
 
@@ -22,11 +26,18 @@ const routes: Routes = [
   { path: 'iniciotrabajador', component: IniciotrabajadorComponent},
   { path: 'registrotrabajador', component: RegistrotrabajadorComponent},
   { path: 'sobre-nosotros', component: SobreNosotrosComponent},
-  { path: 'ingresocliente', component: IngresoclienteComponent}
+  { path: 'cliente-ubicacion', component: ClienteUbicacionComponent},
+  { path: 'ingreso-cliente', component: IngresoClienteComponent},
+  { path: 'trabaja-nosotros', component: TrabajaNosotrosComponent}
+
+  
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
+ 
+  
+  
 })
 export class AppRoutingModule { }

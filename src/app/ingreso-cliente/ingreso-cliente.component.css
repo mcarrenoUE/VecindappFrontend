@@ -1,0 +1,179 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header img {
+    width: 120px;
+    height: auto;
+   
+  }
+  
+  header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 14px 30px;
+    background-color: #0017e6;
+    color: white;
+    height: 80px;
+    overflow: hidden;
+  }
+  
+  .logo {
+    width: 50px;
+  }
+  
+  .nav-link {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+  }
+  
+  .nav-link:hover {
+    text-decoration: underline;
+  }
+  
+  .user-avatar {
+    width: 40px;
+    border-radius: 50%;
+  }
+  
+  .search-section {
+    background: url('/images/vecindapp.png') no-repeat center center; 
+/*     background-color: #BA69EC;
+ */   
+ background-color: #439FD9;
+ background-size: contain; 
+    padding: 30px 15px; 
+    color: white; 
+    height: 90vh; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    text-align: center; 
+    object-fit: contain;
+    
+
+    /*filter: brightness(0.8);  Ajusta el brillo si es necesario */
+}
+  .search-bar input {
+    border-radius: 30px;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  
+  .search-bar button {
+    border-radius: 30px;
+  }
+  
+  .categories {
+    margin-top: 30px;
+  }
+  
+  .category {
+    text-align: center;
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    padding: 10px 10px;
+  }
+  
+  .category img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 10px;
+  }
+  
+  .filter-section {
+    background: #ffffff;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .category:hover{
+    transform: scale(1.05);
+    box-shadow: 0px 6px 10px #0105ff33
+  }
+  
+/* Cards Section */
+.service-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    border-color:#BA69EC;
+  }
+  
+  .card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 6px 10px #0105ff33;
+    border-color:hsl(249, 98%, 35%);
+  }
+  
+  .card-body {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .service-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+  }
+  
+  .card-title {
+    font-size: 1.25rem;
+    color: #0021b6;
+    margin-bottom: 10px;
+  }
+  
+  .card-text {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 15px;
+  }
+  
+  .card-rating {
+    font-size: 0.85rem;
+    color: #333;
+    margin-bottom: 15px;
+  }
+  
+  .favorite-btn {
+    background: transparent;
+    border: none;
+    color: #f00;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+  .favorite-btn:hover {
+    color: #c00;
+  }
+  
+  /* Icons */
+  .fa {
+    font-family: FontAwesome;
+  }
+  
+  .fa-heart:before {
+    content: "\f004";
+  }
+  
+  .fa-heart-o:before {
+    content: "\f08a";
+  }
+  

@@ -111,7 +111,7 @@
       </div>
 
       <!-- Botón -->
-      <button type="submit" class="btn btn-primary" [disabled]="registerForm.invalid">Comenzar</button>
+      <button [routerLink]= "['/cliente-ubicacion']" type="submit" class="btn btn-primary" [disabled]="registerForm.invalid">Siguiente</button>
     </form>
     <br><a routerLink="/iniciotrabajador">Soy Trabajador</a><br>
   </div>
