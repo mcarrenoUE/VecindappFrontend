@@ -6,16 +6,10 @@
     <a href="#" class="volver">Volver</a>
     <h1>Iniciar sesión</h1>
     <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
- 
+
       <div class="mb-3">
         <label for="email" class="form-label">Correo Electrónico</label>
-        <input 
-          type="email" 
-          id="email"
-          class="form-control"
-          formControlName="email"
-          placeholder="Ingresa tu correo"
-        />
+        <input type="email" id="email" class="form-control" formControlName="email" placeholder="Ingresa tu correo" />
         <div *ngIf="loginForm.get('email')?.invalid && loginForm.get('email')?.touched" class="text-danger">
           <small *ngIf="loginForm.get('email')?.errors?.['required']">El correo es obligatorio.</small>
           <small *ngIf="loginForm.get('email')?.errors?.['email']">Formato de correo inválido.</small>
@@ -24,13 +18,7 @@
 
       <div class="mb-3">
         <label for="password" class="form-label">Contraseña</label>
-        <input
-          type="password"
-          id="password"
-          class="form-control"
-          formControlName="password"
-          placeholder="Contraseña"
-        />
+        <input type="password" id="password" class="form-control" formControlName="password" placeholder="Contraseña" />
         <div *ngIf="loginForm.get('password')?.invalid && loginForm.get('password')?.touched" class="text-danger">
           <small *ngIf="loginForm.get('password')?.errors?.['required']">La contraseña es obligatoria.</small>
           <small *ngIf="loginForm.get('password')?.errors?.['minlength']">
@@ -47,7 +35,8 @@
         <br><a routerLink="/registro">¿Sin cuenta? Créala ahora mismo</a><br>
       </div><br>
 
-      <button [routerLink]="'/ingreso-cliente'" type="submit" class="btn btn-primary w-100" [disabled]="loginForm.invalid" >Iniciar Sesión</button>
+      <button [routerLink]="'/ingreso-cliente'" type="submit" class="btn btn-primary w-100"
+        [disabled]="loginForm.invalid">Iniciar Sesión</button>
     </form>
 
     <br><a routerLink="/iniciotrabajador">Soy Trabajador</a><br>
@@ -57,15 +46,14 @@
   </div>
 </div>
 
-  <div class="decorations">
-    <div class="blob blob-2"></div>
-    <div class="blob blob-3"></div>
-    <div class="blob blob-4"></div>
-    <div class="blob blob-5"></div>
-    <div class="blob blob-6"></div>
-    <div class="blob blob-7"></div>
-    <div class="blob blob-8"></div>
-    <div class="blob blob-9"></div>
-    <div class="blob blob-10"></div>
+<div class="decorations">
+  <div class="blob blob-2"></div>
+  <div class="blob blob-3"></div>
+  <div class="blob blob-4"></div>
+  <div class="blob blob-5"></div>
+  <div class="blob blob-6"></div>
+  <div class="blob blob-7"></div>
+  <div class="blob blob-8"></div>
+  <div class="blob blob-9"></div>
+  <div class="blob blob-10"></div>
 </div>
-

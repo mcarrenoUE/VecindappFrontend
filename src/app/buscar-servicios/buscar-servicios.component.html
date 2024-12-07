@@ -1,95 +1,83 @@
-<!DOCTYPE html>
-<html lang="es">
+<header>
+    <div class="logo">
+        <img src="images/vecindapp.png" alt="Logo" />
+    </div>
+    <nav>
+        <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Servicios</a></li>
+            <li><a [routerLink]="['/sobre-nosotros']">Sobre nosotros</a></li>
+            <li><a [routerLink]="['/trabaja-nosotros']">Trabaja con nosotros</a></li>
+        </ul>
+    </nav>
+    <div class="botones-container">
+        <button class="btn-iniciar-sesion" [routerLink]="['/inicio']">Iniciar Sesión</button>
+        <button class="btn-registrarse" [routerLink]="['/registro']">Registrarse</button>
+    </div>
+</header>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Diseño Similar</title>
-
-</head>
-
-<body>
-    <header>
-        <div class="logo">
-            <img src="images/vecindapp.png" alt="Logo" />
-        </div>
-        <nav>
-            <ul>
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#">Servicios</a></li>
-                <li><a [routerLink]="['/sobre-nosotros']">Sobre nosotros</a></li>
-                <li><a [routerLink]="['/trabaja-nosotros']">Trabaja con nosotros</a></li>
-            </ul>
-        </nav>
-        <div class="botones-container">
-            <button class="btn-iniciar-sesion"[routerLink]="['/inicio']">Iniciar Sesión</button>
-            <button class="btn-registrarse"[routerLink]="['/registro']">Registrarse</button>
-        </div>
-    </header>
-
-    <main>
-        <div class="main-content">
-            <div class="right-section">
-                <div class="blob blob-2"></div>
-            </div>
-        </div>
-        <div class="overlay-content">
-            <div class="text-section">
-                <h1 class="title">¡Malas experiencias?</h1>
-                <h2 class="subtitle">¿Deseas algo seguro y confiable?</h2>
-            </div>
-            <div class="images-section">
-                <img src="images/init.png" alt="">
-            </div>
-        </div>
-        <div class="decorations">
-
+<main>
+    <div class="main-content">
+        <div class="right-section">
             <div class="blob blob-2"></div>
-            <div class="blob blob-3"></div>
-            <div class="blob blob-4"></div>
-            <div class="blob blob-5"></div>
-            <div class="blob blob-6"></div>
         </div>
-    </main>
-
-    <div class="seccion2">
-        <h1 class="gradient-text">
-            ¿Por qué utilizar VECINDAPP?
-        </h1>
-        <section class="image-gallery">
-            <div class="gallery-item">
-                <img src="images/imagen1.png" alt="Imagen 1" />
-                <h3 class="gradient-text">Servicios confiables cerca de ti.</h3>
-            </div>
-            <div class="gallery-item">
-                <img src="images/imagen2.png" alt="Imagen 2" />
-                <h3 class="gradient-text">Elige al profesional perfecto.</h3>
-            </div>
-            <div class="gallery-item">
-                <img src="images/imagen3.png" alt="Imagen 3" />
-                <h3 class="gradient-text">Reseñas honestas para decidir mejor.</h3>
-            </div>
-        </section>
     </div>
-
-    <div class="seccion2">
-        <section class="image-gallery">
-            <div class="">
-                <img src="images/imagen4.png" alt="Imagen 4" />
-                <img src="images/imagen6.png" alt="Imagen 6" />
-                <img src="images/imagen5.png" alt="Imagen 5" />  
-            </div>
-        </section>
-        <h1 class="gradient-text">
-            Encuentra ayuda confiable cerca de casa, en el momento que lo necesites
-        </h1>
-        
+    <div class="overlay-content">
+        <div class="text-section">
+            <h1 class="title">¡Malas experiencias?</h1>
+            <h2 class="subtitle">¿Deseas algo seguro y confiable?</h2>
+        </div>
+        <div class="images-section">
+            <img src="images/init.png" alt="">
+        </div>
     </div>
-    <div class="btn-final">
-        <button class="btn-final"  [routerLink]="['/inicio']" > Usar Vecindapp</button> 
-    </div>
+    <div class="decorations">
 
-</body><br>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+        <div class="blob blob-4"></div>
+        <div class="blob blob-5"></div>
+        <div class="blob blob-6"></div>
+    </div>
+</main>
+
+<div class="seccion2">
+    <h1 class="gradient-text">
+        ¿Por qué utilizar VECINDAPP?
+    </h1>
+    <section class="image-gallery">
+        <div class="gallery-item">
+            <img src="images/imagen1.png" alt="Imagen 1" />
+            <h3 class="gradient-text">Servicios confiables cerca de ti.</h3>
+        </div>
+        <div class="gallery-item">
+            <img src="images/imagen2.png" alt="Imagen 2" />
+            <h3 class="gradient-text">Elige al profesional perfecto.</h3>
+        </div>
+        <div class="gallery-item">
+            <img src="images/imagen3.png" alt="Imagen 3" />
+            <h3 class="gradient-text">Reseñas honestas para decidir mejor.</h3>
+        </div>
+    </section>
+</div>
+
+<div class="seccion2">
+    <section class="image-gallery">
+        <div class="">
+            <img src="images/imagen4.png" alt="Imagen 4" />
+            <img src="images/imagen6.png" alt="Imagen 6" />
+            <img src="images/imagen5.png" alt="Imagen 5" />
+        </div>
+    </section>
+    <h1 class="gradient-text">
+        Encuentra ayuda confiable cerca de casa, en el momento que lo necesites
+    </h1>
+
+</div>
+<div class="btn-final">
+    <button class="btn-final" [routerLink]="['/inicio']"> Usar Vecindapp</button>
+</div>
+
+<br>
 
 <app-footer></app-footer>
-</html>
