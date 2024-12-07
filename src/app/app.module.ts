@@ -15,9 +15,11 @@ import { IniciotrabajadorComponent } from './iniciotrabajador/iniciotrabajador.c
 import { RegistrotrabajadorComponent } from './registrotrabajador/registrotrabajador.component';
 import { environment } from '../environment';
 import { SobreNosotrosComponent } from './sobre-nosotros/sobre-nosotros.component';
-import { ClienteUbicacionComponent } from './cliente-ubicacion/cliente-ubicacion.component';
 import { IngresoClienteComponent } from './ingreso-cliente/ingreso-cliente.component';
 import { TrabajaNosotrosComponent } from './trabaja-nosotros/trabaja-nosotros.component';
+import { ClienteubicacionComponent } from './clienteubicacion/clienteubicacion.component';
+import { RegistrodostrabajadorComponent } from './registrodostrabajador/registrodostrabajador.component';
+import { RegistrotrestrabajadorComponent } from './registrotrestrabajador/registrotrestrabajador.component';
 
 
 
@@ -36,11 +38,12 @@ import { TrabajaNosotrosComponent } from './trabaja-nosotros/trabaja-nosotros.co
     IniciotrabajadorComponent,
     RegistrotrabajadorComponent,
     SobreNosotrosComponent,
-    ClienteUbicacionComponent,
     IngresoClienteComponent,
     TrabajaNosotrosComponent,
+    ClienteubicacionComponent,
+    RegistrodostrabajadorComponent,
+    RegistrotrestrabajadorComponent,
    
-    
   ],
   imports: [
 

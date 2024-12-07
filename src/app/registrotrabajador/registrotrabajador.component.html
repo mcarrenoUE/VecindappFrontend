@@ -1,20 +1,124 @@
-<div class="mb-3">
-    <label for="formFile" class="form-label">Default file input example</label>
-    <input class="form-control" type="file" id="formFile">
+<header>
+  <img src="images/vecindapp.png" alt="Logo VecindApp">
+</header>
+<div class="register-container">
+  <div class="register-box">
+    <a href="/ofrecer-servicios" class="back-link">Volver</a>
+    <h1>Registrarse</h1>
+    <form [formGroup]="registerForm" (ngSubmit)="onRegister()">
+      <!-- Campo Nombre -->
+      <label for="nombre">Nombre</label>
+      <input
+        id="nombre"
+        formControlName="nombre"
+        type="text"
+        placeholder="Juan Felipe"
+      />
+      <div *ngIf="registerForm.get('nombre')?.invalid && registerForm.get('nombre')?.touched">
+        <small *ngIf="registerForm.get('nombre')?.errors?.['required']">El nombre es obligatorio.</small>
+        <small *ngIf="registerForm.get('nombre')?.errors?.['pattern']">El nombre solo debe tener letras.</small>
+        <small *ngIf="registerForm.get('nombre')?.errors?.['minlength']">El nombre debe tener al menos 3 caracteres.</small>
+      </div>
+
+      <!-- Campo Apellido -->
+      <label for="apellido">Apellido</label>
+      <input
+        id="apellido"
+        formControlName="apellido"
+        type="text"
+        placeholder="Amado Montero"
+      />
+      <div *ngIf="registerForm.get('apellido')?.invalid && registerForm.get('apellido')?.touched">
+        <small *ngIf="registerForm.get('apellido')?.errors?.['required']">El apellido es obligatorio.</small>
+        <small *ngIf="registerForm.get('apellido')?.errors?.['pattern']">El apellido solo debe tener letras.</small>
+        <small *ngIf="registerForm.get('apellido')?.errors?.['minlength']">El apellido debe tener al menos 3 caracteres.</small>
+
+      </div>
+
+      <!-- Campo Fecha de Nacimiento -->
+      <label for="fechaNacimiento">Fecha de Nacimiento</label>
+      <input
+        id="fechaNacimiento"
+        formControlName="fechaNacimiento"
+        type="date"
+      />
+      <div *ngIf="registerForm.get('fechaNacimiento')?.invalid && registerForm.get('fechaNacimiento')?.touched">
+        <small *ngIf="registerForm.get('fechaNacimiento')?.errors?.['required']">La fecha de nacimiento es obligatoria.</small>
+        <small *ngIf="registerForm.get('fechaNacimiento')?.errors?.['isAdult']">Debes ser mayor de edad.</small>
+      </div>
+
+      <!-- Campo Correo -->
+      <label for="correo">Correo</label>
+      <input
+        id="correo"
+        formControlName="correo"
+        type="email"
+        placeholder="Juan@yop.com"
+      />
+      <div *ngIf="registerForm.get('correo')?.invalid && registerForm.get('correo')?.touched">
+        <small *ngIf="registerForm.get('correo')?.errors?.['required']">El correo es obligatorio.</small>
+        <small *ngIf="registerForm.get('correo')?.errors?.['pattern']">Ingrese formato de correo electrónico estándar.</small>
+        <small *ngIf="registerForm.get('correo')?.errors?.['email']">El correo no es válido.</small>
+      </div>
+
+      <!-- Campo Confirmar Correo -->
+      <label for="confirmarCorreo">Confirmar Correo</label>
+      <input
+        id="confirmarCorreo"
+        formControlName="confirmarCorreo"
+        type="email"
+        placeholder="Juan@yop.com"
+      />
+      <div *ngIf="registerForm.get('confirmarCorreo')?.invalid && registerForm.get('confirmarCorreo')?.touched">
+        <small *ngIf="registerForm.get('confirmarCorreo')?.errors?.['required']">Confirmar el correo es obligatorio.</small>
+        <small *ngIf="registerForm.hasError('emailsMismatch')">Los correos no coinciden.</small>
+      </div>
+
+      <!-- Campo Contraseña -->
+      <label for="contrasena">Contraseña</label>
+      <input
+        id="contrasena"
+        formControlName="contrasena"
+        type="password"
+        placeholder="********"
+      />
+      <div *ngIf="registerForm.get('contrasena')?.invalid && registerForm.get('contrasena')?.touched">
+        <small *ngIf="registerForm.get('contrasena')?.errors?.['required']">La contraseña es obligatoria.</small>
+        <small *ngIf="registerForm.get('contrasena')?.errors?.['pattern']">La contraseña debe tener al menos 1 minuscula 1 mayuscula y un número.</small>
+        <small *ngIf="registerForm.get('contrasena')?.errors?.['minlength']">La contraseña debe tener al menos 8 caracteres.</small>
+      </div>
+
+      <!-- Campo Confirmar Contraseña -->
+      <label for="confirmarContrasena">Confirmar Contraseña</label>
+      <input
+        id="confirmarContrasena"
+        formControlName="confirmarContrasena"
+        type="password"
+        placeholder="********"
+      />
+      <div *ngIf="registerForm.get('confirmarContrasena')?.invalid && registerForm.get('confirmarContrasena')?.touched">
+        <small *ngIf="registerForm.hasError('passwordsMismatch')">Las contraseñas no coinciden.</small>
+      </div>
+
+
+
+      <!-- Botón -->
+      <button [routerLink]= "['/registrodostrabajador']" type="submit" class="btn btn-primary" [disabled]="registerForm.invalid">Siguiente</button>
+    </form>
+    <br><a routerLink="/inicio">Soy Cliente</a><br>
   </div>
-  <div class="mb-3">
-    <label for="formFileMultiple" class="form-label">Multiple files input example</label>
-    <input class="form-control" type="file" id="formFileMultiple" multiple>
+  <div class="register-image">
+    <img src="\images\plomeros.jpg" alt="Ilustración de Registro">
   </div>
-  <div class="mb-3">
-    <label for="formFileDisabled" class="form-label">Disabled file input example</label>
-    <input class="form-control" type="file" id="formFileDisabled" disabled>
-  </div>
-  <div class="mb-3">
-    <label for="formFileSm" class="form-label">Small file input example</label>
-    <input class="form-control form-control-sm" id="formFileSm" type="file">
-  </div>
-  <div>
-    <label for="formFileLg" class="form-label">Large file input example</label>
-    <input class="form-control form-control-lg" id="formFileLg" type="file">
-  </div>
+</div>
+<div class="decorations">
+  <div class="blob blob-2"></div>
+  <div class="blob blob-3"></div>
+  <div class="blob blob-4"></div>
+  <div class="blob blob-5"></div>
+  <div class="blob blob-6"></div>
+  <div class="blob blob-7"></div>
+  <div class="blob blob-8"></div>
+  <div class="blob blob-9"></div>
+  <div class="blob blob-10"></div>
+</div>

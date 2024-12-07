@@ -9,9 +9,11 @@ import { FooterComponent } from './footer/footer.component'
 import { IniciotrabajadorComponent } from './iniciotrabajador/iniciotrabajador.component';
 import { RegistrotrabajadorComponent } from './registrotrabajador/registrotrabajador.component';
 import { SobreNosotrosComponent } from './sobre-nosotros/sobre-nosotros.component';
-import { ClienteUbicacionComponent } from './cliente-ubicacion/cliente-ubicacion.component';
 import { IngresoClienteComponent } from './ingreso-cliente/ingreso-cliente.component';
 import { TrabajaNosotrosComponent } from './trabaja-nosotros/trabaja-nosotros.component';
+import { ClienteubicacionComponent } from './clienteubicacion/clienteubicacion.component';
+import { RegistrodostrabajadorComponent } from './registrodostrabajador/registrodostrabajador.component';
+import { RegistrotrestrabajadorComponent } from './registrotrestrabajador/registrotrestrabajador.component';
 
 
 
@@ -26,9 +28,11 @@ const routes: Routes = [
   { path: 'iniciotrabajador', component: IniciotrabajadorComponent},
   { path: 'registrotrabajador', component: RegistrotrabajadorComponent},
   { path: 'sobre-nosotros', component: SobreNosotrosComponent},
-  { path: 'cliente-ubicacion', component: ClienteUbicacionComponent},
   { path: 'ingreso-cliente', component: IngresoClienteComponent},
-  { path: 'trabaja-nosotros', component: TrabajaNosotrosComponent}
+  { path: 'trabaja-nosotros', component: TrabajaNosotrosComponent},
+  { path: 'clienteubicacion', component: ClienteubicacionComponent},
+  { path: 'registrodostrabajador', component: RegistrodostrabajadorComponent},
+  { path: 'registrotrestrabajador', component: RegistrotrestrabajadorComponent}
 
   
 ];

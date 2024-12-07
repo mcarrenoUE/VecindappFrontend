@@ -1,0 +1,84 @@
+<header>
+    <img src="images/vecindapp.png" alt="Logo VecindApp">
+</header>
+<div class="container d-flex justify-content-center align-items-center vh-100">
+    <div class="row w-100">
+        <div class="register-image">
+            <p>Tu ubicación solo se usará para brindarte los mejores servicios cercanos.</p> 
+            <p>En VecindApp, respetamos tu privacidad.</p>
+            <img src="\images\ubicaciontrabajador.png" alt="Ilustración de Registro">
+        </div>
+        <div class="col-md-6">
+
+            <div class="form-box p-4 rounded bg-white">
+                <a [routerLink]="['/registro']" class="back-link">Volver</a>
+                <h2 class="text-center mb-4">Ubicación</h2>
+                <form [formGroup]="registroUbiForm" (ngSubmit)="onSubmit()">
+                    <div class="mb-3">
+                        <label for="direccion" class="form-label">Dirección</label>
+                        <input type="text" id="direccion" class="form-control" formControlName="direccion"
+                            placeholder="Ingrese su dirección" />
+                        <div class="text-danger" *ngIf="direccion.invalid && direccion.touched">
+                            <div *ngIf="direccion.errors?.['required']">La dirección es obligatoria.</div>
+                            <div *ngIf="direccion.errors?.['pattern']">
+                                Formato inválido. Ejemplo: "Calle 123 #45-67".
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="barrio" class="form-label">Barrio</label>
+                        <input type="text" id="barrio" class="form-control" formControlName="barrio"
+                            placeholder="Ingrese su barrio" />
+                        <div class="text-danger" *ngIf="barrio.invalid && barrio.touched">
+                            <div *ngIf="barrio.errors?.['required']">El barrio es obligatorio.</div>
+                            <div *ngIf="barrio.errors?.['pattern']">
+                                Solo se permiten letras y espacios. Ejemplo: "Chapinero".
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="localidad" class="form-label">Localidad</label>
+                        <select id="localidad" class="form-select" formControlName="localidad">
+                            <option value="" disabled>Seleccione una localidad</option>
+                            <option *ngFor="let localidad of localidades" [value]="localidad">
+                                {{ localidad }}
+                            </option>
+                        </select>
+                        <div class="text-danger" *ngIf="localidad.invalid && localidad.touched">
+                            Seleccione una localidad.
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="ciudad" class="form-label">Ciudad</label>
+                        <select id="ciudad" class="form-select" formControlName="ciudad">
+                            <option value="" disabled>Seleccione una ciudad</option>
+                            <option *ngFor="let ciudad of ciudades" [value]="ciudad">
+                                {{ ciudad }}
+                            </option>
+                        </select>
+                        <div class="text-danger" *ngIf="ciudad.invalid && ciudad.touched">
+                            Seleccione una ciudad.
+                        </div><br>
+                    
+                   
+                    <button type="submit" [routerLink]="['/registrotrestrabajador']" class="btn btn-primary w-100"
+                        [disabled]="registroUbiForm.invalid">
+                        Siguiente
+                    </button>
+                </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="decorations">
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+        <div class="blob blob-4"></div>
+        <div class="blob blob-5"></div>
+        <div class="blob blob-6"></div>
+        <div class="blob blob-7"></div>
+    </div>

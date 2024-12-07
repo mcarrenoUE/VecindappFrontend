@@ -1,0 +1,83 @@
+<header>
+  <img src="images/vecindapp.png" alt="Logo VecindApp">
+</header>
+
+
+<div class="registro-tres-trabajador">
+  
+  <div class="verification-section">
+    <a href="/registrodostrabajador" class="back-link">Volver</a>
+    <h2>Verificación de Identidad</h2>
+
+    <div class="upload-field">
+      <label>Documento Identidad</label>
+      <input type="file" accept=".pdf" (change)="onFileSelected($event, 'documentoIdentidad')" />
+    </div>
+
+    <div class="upload-field">
+      <label>RUT</label>
+      <input type="file" accept=".pdf" (change)="onFileSelected($event, 'RUT')" />
+    </div>
+
+    <div class="upload-field">
+      <label>Antecedentes Judiciales</label>
+      <input type="file" accept=".pdf" (change)="onFileSelected($event, 'antecedentesJudiciales')" />
+    </div>
+
+    <div class="upload-field">
+      <label>Fotografía de Perfil</label>
+      <input type="file" accept="image/*" (change)="onFileSelected($event, 'fotografiaPerfil')" />
+    </div>
+
+    <!-- Checkbox para Términos y Condiciones -->
+    <div class="checkbox">
+      <label for="terminos">Acepta Términos y Condiciones <a href="#">Verificar aquí</a></label>
+      <br><input id="terminos" type="checkbox" formControlName="terminos" />
+    </div>
+   
+
+    <button class="btn-comenzar" (click)="onSubmit()">Confirmar</button>
+  
+  </div>
+  <div class="register-image">
+    <p>No te preocupes, tus documentos están protegidos con la mejor tecnología de encriptación. Tu información personal estará siempre segura con VecindApp.</p>
+    <img src="\images\candado.png" alt="Ilustración de Registro">
+  </div>
+</div>
+
+
+
+<!-- modal -->
+<div class="modal-overlay" *ngIf="isModalVisible">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h2>¡Bienvenido a la Familia VecindApp!</h2>
+    </div>
+    <div class="modal-body">
+      <img src="/images/vecindapp.png" alt="Logo VecindApp" class="modal-image">
+      <div class="modal-text">
+        <p>🎉 Estamos emocionados de que te hayas registrado. 🎉</p>
+        <p>Te avisaremos pronto a tu correo electrónico sobre el estado de tu registro y si cumples con los requisitos
+          para unirte a nuestra comunidad.</p> 
+        <p> ¡Prepárate para disfrutar de todas las ventajas que tenemos para ti!</p>
+        <p>Mientras tanto, si tienes alguna pregunta, no dudes en contactarnos. ¡Estamos aquí para ayudarte!</p>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button [routerLink]="['/ofrecer-servicios']" (click)="closeModal()">Cerrar</button>
+    </div>
+  </div>
+</div>
+
+
+<div class="decorations">
+  <div class="blob blob-2"></div>
+  <div class="blob blob-3"></div>
+  <div class="blob blob-4"></div>
+  <div class="blob blob-5"></div>
+  <div class="blob blob-6"></div>
+  <div class="blob blob-7"></div>
+  <div class="blob blob-8"></div>
+  <div class="blob blob-9"></div>
+  <div class="blob blob-10"></div>
+</div>

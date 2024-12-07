@@ -1,0 +1,253 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+  }
+  
+  small {
+    color: red;
+    font-size: 0.8em;
+    margin-top: 2px;
+    display: block;
+  }
+  input.ng-invalid.ng-touched {
+    border-color: red;
+  }
+  
+  header img {
+    width: 120px;
+    height: auto;
+  }
+  
+  header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 14px 30px;
+    background-color: hsl(0, 0%, 100%);
+    color: white;
+    height: 80px;
+    overflow: hidden;
+  }
+  
+  
+  .register-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content:flex-end;
+    padding: 50px;
+    transform: translateY(-90px); /* Ajusta la posición más cerca del h2 */
+   
+  }
+  
+  .register-box {
+    width: 50%;
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px #BA69EC;
+    
+  }
+  
+ 
+  
+  .register-box h1 {
+    margin-bottom: 20px;
+    color: #6a1b9a;
+    font-weight: 600;
+    text-align: center;
+    
+  }
+  
+  .register-box label {
+    display: block;
+    margin-top: 10px;
+    font-weight: 400;
+    font-weight: bold;
+    color: #6a1b9a;
+  }
+  
+  .register-box input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+  
+  .register-box input:focus {
+    border-color: #BA69EC;
+    outline: none;
+    box-shadow: 0 0 5px #BA69EC;
+  }
+  
+  .register-box .checkbox {
+    display: inline-block;
+    align-items: center;
+    margin-bottom: 15px;
+   
+  }
+  
+  .register-box .checkbox input {
+    margin-right: 1px;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .register-box .checkbox label {
+    color: #BA69EC;
+    font-size: 0.9rem;
+    display: inline-block;
+    align-items: center;
+
+  }
+  
+  .register-box button {
+    width: 50%;
+    padding: 8px;
+    display: block; 
+    margin: 0 auto;
+    background-color: #6a1b9a;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+   
+    
+  }
+  
+  .register-box button:hover {
+    background-color: #BA69EC;
+  }
+  
+  .register-box .back-link,
+  .register-box .worker-link {
+    display: block;
+    text-align:right;
+    margin-top: 15px;
+    color: hsl(277, 100%, 32%);
+    text-decoration: line;
+  }
+  
+  .register-box .back-link:hover,
+  .register-box .worker-link:hover {
+    text-decoration: underline;
+  }
+  
+  .register-image {
+    text-align: center;
+    width: 45%;
+    z-index: -10;
+  }
+  
+  .register-image img {
+    width: 80%;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    z-index: -10;
+  }
+  
+
+  
+/*   BURBUJITAS EN LA PANTALLA, SE REALIZAN CON DIV  */
+/* General styles for blobs */
+.blob {
+  position: absolute;
+  background-color: hsl(305, 90%, 61%);
+  /* Color base */
+  border-radius: 50%;
+  opacity: 0.8;
+
+}
+
+
+/* Blob 2 */
+.blob-2 {
+  width: 200px;
+  height: 200px;
+  bottom: -70px;
+  right: -70px;
+  background-color: hsl(283, 54%, 55%);
+  /* Color más claro */
+
+}
+
+/* Blob 3 */
+.blob-3 {
+  width: 120px;
+  height: 120px;
+  top: 100px;
+  right: 80px;
+  background-color: rgb(217, 67, 217);
+  z-index: 1;
+
+}
+
+/* Blob 4 */
+.blob-4 {
+  width: 180px;
+  height: 180px;
+  bottom: 0;
+  left: 20px;
+  background-color: hsl(276, 66%, 56%);
+  z-index: -10;
+}
+
+/* Blob 5 */
+.blob-5 {
+  width: 50px;
+  height: 50px;
+  top: 20%;
+  left: 5%;
+  transform: translate(-50%, -50%);
+  background-color: hsl(293, 52%, 53%);
+  z-index: 10;
+}
+
+/* Blob 6 */
+.blob-6 {
+  width: 40px;
+  height: 40px;
+  top: 5%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+  background-color: hsl(288, 73%, 64%);
+  z-index: 1;
+}
+.blob-7{
+  width: 60px;
+  height: 60px;
+  top: 200%;
+  left: 85%;
+  transform: translate(-50%, -50%);
+  background-color: hsl(286, 67%, 55%);
+  z-index: 10;
+}
+
+.blob-8{
+  width: 120px;
+  height: 120px;
+  transform: translate(-400%, 210%);
+  background-color: #d941d9;
+  bottom: 70px;
+  right: 77px;
+  z-index:-1;
+}
+
+.blob-9{
+  width: 120px;
+  height: 120px;
+  transform: translate(-700%, 550%);
+  background-color: hsl(313, 67%, 55%);
+  bottom: 70px;
+  right: 70px;
+  z-index:-1;
+}
+

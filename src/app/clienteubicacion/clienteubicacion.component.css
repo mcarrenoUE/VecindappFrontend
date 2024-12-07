@@ -1,0 +1,192 @@
+/* Estilo general */
+body {
+    background-color: #ffffff; /* Color de fondo claro */
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  header img {
+    width: 120px;
+    height: auto;
+  }
+  
+  header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 14px 30px;
+    background-color: hsl(0, 0%, 100%);
+    color: white;
+    height: 80px;
+    overflow: hidden;
+  } header img {
+    width: 120px;
+    height: auto;
+  }
+  
+  header {
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+    padding: 14px 30px;
+    background-color: hsl(0, 0%, 100%);
+    color: white;
+    height: 80px;
+    overflow: hidden;
+  }
+  /* Caja del formulario */
+  .form-box {
+    max-width: 400px;
+    margin: 0 auto;
+    transform: translateY(-50px); /* Ajusta la posición más cerca del h2 */
+  }
+  
+  /* Sombra suave para la caja */
+  .shadow {
+    box-shadow: 0 4px 6px rgba(49, 0, 185, 0.993);
+  }
+  
+  /* Estilo de la imagen */
+  .img-fluid {
+    max-width: 100%;
+    height: auto;
+    
+  }
+
+  .register-image {
+    text-align: center;
+    width: 50%;
+  }
+  
+  .register-image img {
+    width: 80%;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  }
+  
+  h2 {
+    margin-bottom: 20px;
+    color: #0a0099;
+    font-weight: 600;
+    text-align: center;
+    
+  }
+
+  .form-box {
+  
+    border-radius: 10px;
+    box-shadow: 0 4px 10px hsl(225, 100%, 50%);
+    
+  }
+  
+input:focus {
+    border-color: hwb(236 4% 33%);
+    outline: none;
+    box-shadow: 0 0 5px #1013d480;
+  }
+  .form-box button {
+    width: 100%;
+    padding: 5px;
+    background-color: #0a0099;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .form-box button:hover {
+    background-color: #4167D9;
+  }
+  
+  .form-box .checkbox {
+    display: inline-block;
+    align-items: center;
+    margin-bottom: 15px;
+   
+  }
+
+  .form-box .checkbox input {
+    margin-right: 10px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .form-box .checkbox label {
+    color: #4167D9;
+    font-size: 0.9rem;
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+
+  }
+  
+/*   BURBUJITAS EN LA PANTALLA, SE REALIZAN CON DIV  */
+/* General styles for blobs */
+.blob {
+  position: absolute;
+  background-color: #4167D9;
+  /* Color base */
+  border-radius: 50%;
+  opacity: 0.8;
+
+}
+
+
+/* Blob 2 */
+.blob-2 {
+  width: 200px;
+  height: 200px;
+  bottom: -70px;
+  right: -70px;
+  background-color: #439FD9;
+  /* Color más claro */
+
+}
+
+/* Blob 3 */
+.blob-3 {
+  width: 120px;
+  height: 120px;
+  top: 100px;
+  right: 80px;
+  background-color: #439FD9;
+  z-index: -1;
+
+}
+
+/* Blob 4 */
+.blob-4 {
+  width: 180px;
+  height: 180px;
+  bottom: 0;
+  left: 20px;
+  background-color: #439FD9;
+  z-index: -10;
+}
+
+/* Blob 5 */
+.blob-5 {
+  width: 50px;
+  height: 50px;
+  top: 20%;
+  left: 5%;
+  transform: translate(-50%, -50%);
+  background-color: #4167D9;
+  z-index: 10;
+}
+
+/* Blob 6 */
+.blob-6 {
+  width: 40px;
+  height: 40px;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #4167D9;
+  z-index: 1;
+}
+

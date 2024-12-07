@@ -1,168 +1,196 @@
-body {
-    font-family: 'Poppins', sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
+/* Estilos globales */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+}
 /* Header */
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 30px;
-    background-color: #4167D9;
-    color: white;
-    height: 80px;
-    overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: #4167D9;
+  color: white;
+  height: 80px;
+  overflow: hidden;
 }
 
 header .logo img {
-    height: 90%;
-    max-height: 100px;
+  height: 90%;
+  max-height: 100px;
 
 }
 
 header nav {
-    padding: 10px 30px;
-    border-radius: 8px;
-    border: #333;
+  padding: 10px 30px;
+  border-radius: 8px;
+  border: #333;
 }
 
 header nav ul {
-    display: flex;
-    list-style: none;
-    gap: 50px;
-    text-align: center;
+  display: flex;
+  list-style: none;
+  gap: 50px;
+  text-align: center;
 
 }
 
 header nav ul li {
-    position: relative;
-    /* Para el efecto de subrayado */
+  position: relative;
+  /* Para el efecto de subrayado */
 
 }
 
 header nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 1rem;
-    text-align: center;
-    padding: 8px 15px;
-    border-radius: 5px;
-    transition: background-color 0.3s, transform 0.3s;
+  color: hsl(0, 0%, 100%);
+  text-decoration: none;
+  font-size: 1rem;
+  text-align: center;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s, transform 0.3s;
 
 }
 
 .botones-container {
-    display: flex;
-    gap: 20px;
+  display: flex;
+  gap: 20px;
 
 }
 
 header .btn-iniciar-sesion,
 header .btn-registrarse {
-    padding: 12px 20px;
-    background-color: #ffffff;
-    color: #4167D9;
-    border: 1px solid #ffffff;
-    border-radius: 10px;
-    cursor: pointer;
-    font-weight: bold;
-    font-size: 1rem;
-    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
-
-}
-
-
-body {
-  font-family: 'Arial', sans-serif;
-  color: #333;
-  background-color: #f8f9fa;
-  margin: 0;
-  padding: 0;
-}
-
-h2.title {
-  font-size: 2.5rem;
-  color: #2b5797;
+  padding: 12px 20px;
+  background-color: #ffffff;
+  color: #4167D9;
+  border: 1px solid #ffffff;
+  border-radius: 10px;
+  cursor: pointer;
   font-weight: bold;
-  margin-bottom: 1rem;
-  text-shadow: 1px 1px 2px #ccc;
+  font-size: 1rem;
+  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+
 }
 
-p.description {
-  font-size: 1.2rem;
-  line-height: 1.8;
-  color: #555;
+/* Cambiar el fondo del header al pasar el mouse sobre los enlaces del nav */
+header nav ul li a:hover,
+header .btn-iniciar-sesion:hover,
+header .btn-registrarse:hover {
+  background-color: #BA69EC;
 }
 
-img.img-fluid {
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
+header .btn-iniciar-sesion:hover,
+header .btn-registrarse:hover {
+  background-color: #4167D9;
+  color: #ffffff;
+  border-color: #ffffff;
 }
 
-img.img-fluid:hover {
-  transform: scale(1.05);
+/* Contenedor principal del carrusel */
+.carousel img {
+  position: relative;
+  width: 100%; /* Ocupa todo el ancho del contenedor */
+  height: 550px; /* Altura fija del carrusel */
+  overflow: hidden; /* Oculta contenido desbordado */
+  
 }
 
-.py-5 {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
+
+/* Transición suave para cada imagen */
+.carousel-item {
+  transition: transform 0.9s ease-in-out; /* Cambia el tiempo aquí para ajustar la suavidad */
 }
 
+#carouselExampleSlidesOnly {
+  position: relative; /* Permite mantener el flujo del diseño */
+  z-index: 1; /* Asegura que se superponga correctamente */
+  margin-bottom: 20px; /* Separación del contenido siguiente */
+}
+
+
+/* Container and Layout */
 .container {
-  max-width: 1200px;
-  margin: auto;
-  padding: 0 1rem;
+  max-width: 1140px;
 }
 
-.float-image {
-  animation: float 3s infinite ease-in-out;
+/* Title styling */
+.title {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #212121;
+  margin-bottom: 1.5rem;
 }
 
-@keyframes float {
-  0%, 100% {
-      transform: translateY(0);
-  }
-  50% {
-      transform: translateY(-10px);
-  }
+/* Subtitle for sections */
+.subtitle {
+  font-size: 1.75rem;
+  font-weight: 500;
+  color: #007bff;
+  margin-bottom: 1rem;
 }
 
-.fade-in-image {
-  animation: fadeIn 2s ease-in-out;
+/* Description text */
+.description {
+  font-size: 1.125rem;
+  color: #555;
+  line-height: 1.8;
 }
 
-@keyframes fadeIn {
-  from {
-      opacity: 0;
-  }
-  to {
-      opacity: 1;
-  }
+/* Image styling */
+img.img-fluid {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
 }
 
-.slide-image {
-  animation: slideIn 1.5s ease-in-out;
+/* Section spacing and background */
+section {
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
-@keyframes slideIn {
-  from {
-      transform: translateX(-50px);
-      opacity: 0;
-  }
-  to {
-      transform: translateX(0);
-      opacity: 1;
-  }
+.bg-light {
+  background-color: #f9f9f9;
 }
 
+/* Text colors in sections */
+.bg-light .subtitle,
+.bg-light .description {
+  color: #212121;
+}
+
+.text-muted {
+  color: #6c757d !important;
+}
+
+/* Customizing footer */
+app-footer {
+  background-color: #007bff;
+  padding: 30px 0;
+  color: #fff;
+  text-align: center;
+  font-size: 1rem;
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
-  h2.title {
-      font-size: 2rem;
+  .title {
+    font-size: 2rem;
   }
-  p.description {
-      font-size: 1rem;
+
+  .subtitle {
+    font-size: 1.5rem;
+  }
+
+  .description {
+    font-size: 1rem;
   }
 }

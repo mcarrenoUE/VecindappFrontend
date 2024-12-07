@@ -6,6 +6,9 @@ import { Component } from '@angular/core';
   styleUrl: './ingreso-cliente.component.css'
 })
 export class IngresoClienteComponent {
+
+  userName: string = ''; 
+
   services = [
     {
       id: 1,
@@ -21,6 +24,47 @@ export class IngresoClienteComponent {
       description: 'Maquillista profesional especializada en bodas.',
       rating: 4.3,
       image: 'images/trabajo1.png',
+      favorite: false
+    },
+    {
+      id: 2,
+      name: 'Martha Beltrán Roa',
+      description: 'Maquillista profesional especializada en bodas.',
+      rating: 4.3,
+      image: 'images/inicio_trabajo.jpg',
+      favorite: false
+    },
+    {
+      id: 2,
+      name: 'Martha Beltrán Roa',
+      description: 'Maquillista profesional especializada en bodas.',
+      rating: 4.3,
+      image: 'images/inicio_trabajo.jpg',
+      favorite: false
+    },
+
+    {
+      id: 2,
+      name: 'Martha Beltrán Roa',
+      description: 'Maquillista profesional especializada en bodas.',
+      rating: 4.3,
+      image: 'images/inicio_trabajo.jpg',
+      favorite: false
+    },
+    {
+      id: 2,
+      name: 'Martha Beltrán Roa',
+      description: 'Maquillista profesional especializada en bodas.',
+      rating: 4.3,
+      image: 'images/inicio_trabajo.jpg',
+      favorite: false
+    },
+    {
+      id: 2,
+      name: 'Martha Beltrán Roa',
+      description: 'Maquillista profesional especializada en bodas.',
+      rating: 4.3,
+      image: 'images/inicio_trabajo.jpg',
       favorite: false
     },
     {

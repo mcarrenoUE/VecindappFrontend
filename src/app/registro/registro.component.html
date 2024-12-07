@@ -4,7 +4,7 @@
 <div class="register-container">
   <div class="register-box">
     <a href="#" class="back-link">Volver</a>
-    <h2>Registrarse</h2>
+    <h1>Registrarse</h1>
     <form [formGroup]="registerForm" (ngSubmit)="onRegister()">
       <!-- Campo Nombre -->
       <label for="nombre">Nombre</label>
@@ -16,6 +16,7 @@
       />
       <div *ngIf="registerForm.get('nombre')?.invalid && registerForm.get('nombre')?.touched">
         <small *ngIf="registerForm.get('nombre')?.errors?.['required']">El nombre es obligatorio.</small>
+        <small *ngIf="registerForm.get('nombre')?.errors?.['pattern']">El nombre solo debe tener letras.</small>
         <small *ngIf="registerForm.get('nombre')?.errors?.['minlength']">El nombre debe tener al menos 3 caracteres.</small>
       </div>
 
@@ -29,7 +30,9 @@
       />
       <div *ngIf="registerForm.get('apellido')?.invalid && registerForm.get('apellido')?.touched">
         <small *ngIf="registerForm.get('apellido')?.errors?.['required']">El apellido es obligatorio.</small>
+        <small *ngIf="registerForm.get('apellido')?.errors?.['pattern']">El apellido solo debe tener letras.</small>
         <small *ngIf="registerForm.get('apellido')?.errors?.['minlength']">El apellido debe tener al menos 3 caracteres.</small>
+
       </div>
 
       <!-- Campo Fecha de Nacimiento -->
@@ -54,6 +57,7 @@
       />
       <div *ngIf="registerForm.get('correo')?.invalid && registerForm.get('correo')?.touched">
         <small *ngIf="registerForm.get('correo')?.errors?.['required']">El correo es obligatorio.</small>
+        <small *ngIf="registerForm.get('correo')?.errors?.['pattern']">Ingrese formato de correo electrónico estándar.</small>
         <small *ngIf="registerForm.get('correo')?.errors?.['email']">El correo no es válido.</small>
       </div>
 
@@ -80,6 +84,7 @@
       />
       <div *ngIf="registerForm.get('contrasena')?.invalid && registerForm.get('contrasena')?.touched">
         <small *ngIf="registerForm.get('contrasena')?.errors?.['required']">La contraseña es obligatoria.</small>
+        <small *ngIf="registerForm.get('contrasena')?.errors?.['pattern']">La contraseña debe tener al menos 1 minuscula 1 mayuscula y un número.</small>
         <small *ngIf="registerForm.get('contrasena')?.errors?.['minlength']">La contraseña debe tener al menos 8 caracteres.</small>
       </div>
 
@@ -95,23 +100,10 @@
         <small *ngIf="registerForm.hasError('passwordsMismatch')">Las contraseñas no coinciden.</small>
       </div>
 
-      <!-- Checkbox para Términos y Condiciones -->
-      <div class="checkbox">
-        <label for="terminos">Acepta Términos y Condiciones <a href="#">Verificar aquí</a></label>
-        <input
-          id="terminos"
-          type="checkbox"
-          formControlName="terminos"
-        />
-      
-      </div>
-      
-      <div *ngIf="registerForm.get('terminos')?.invalid && registerForm.get('terminos')?.touched">
-        <small>Debes aceptar los términos y condiciones.</small>
-      </div>
+
 
       <!-- Botón -->
-      <button [routerLink]= "['/cliente-ubicacion']" type="submit" class="btn btn-primary" [disabled]="registerForm.invalid">Siguiente</button>
+      <button [routerLink]= "['/clienteubicacion']" type="submit" class="btn btn-primary" [disabled]="registerForm.invalid">Siguiente</button>
     </form>
     <br><a routerLink="/iniciotrabajador">Soy Trabajador</a><br>
   </div>
