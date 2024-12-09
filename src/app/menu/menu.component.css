@@ -1,0 +1,17 @@
+.nav-link {
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+  }
+  
+  .navbar-toggler {
+    border: none;
+    outline: none;
+  }
+  
+  .navbar-toggler-icon {
+    background-color: #000;
+    border-radius: 4px;
+  }
+  

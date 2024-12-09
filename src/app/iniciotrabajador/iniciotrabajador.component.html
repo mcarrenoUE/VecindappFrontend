@@ -46,7 +46,7 @@
         <br><a routerLink="/registrotrabajador">¿Sin cuenta? Créala ahora mismo</a><br>
       </div><br>
 
-      <button type="submit" class="btn btn-primary w-100" [disabled]="loginForm.invalid">Iniciar Sesión</button>
+      <button [routerLink]="['/ingreso-trabajador']" type="submit" class="btn btn-primary w-100" [disabled]="loginForm.invalid">Iniciar Sesión</button>
     </form>
     <br><a routerLink="/inicio">Soy Cliente</a><br>
   </div>

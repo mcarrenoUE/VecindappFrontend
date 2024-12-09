@@ -10,14 +10,7 @@ export class IngresoClienteComponent {
   userName: string = ''; 
 
   services = [
-    {
-      id: 1,
-      name: 'Jorge Cubides Rondon',
-      description: 'Maestro de obra con 15 años de experiencia.',
-      rating: 4.5,
-      image: 'images/imagen1.png',
-      favorite: false
-    },
+
     {
       id: 2,
       name: 'Martha Beltrán Roa',
@@ -35,50 +28,21 @@ export class IngresoClienteComponent {
       favorite: false
     },
     {
-      id: 2,
-      name: 'Martha Beltrán Roa',
-      description: 'Maquillista profesional especializada en bodas.',
-      rating: 4.3,
-      image: 'images/inicio_trabajo.jpg',
-      favorite: false
-    },
-
-    {
-      id: 2,
-      name: 'Martha Beltrán Roa',
-      description: 'Maquillista profesional especializada en bodas.',
-      rating: 4.3,
-      image: 'images/inicio_trabajo.jpg',
-      favorite: false
-    },
-    {
-      id: 2,
-      name: 'Martha Beltrán Roa',
-      description: 'Maquillista profesional especializada en bodas.',
-      rating: 4.3,
-      image: 'images/inicio_trabajo.jpg',
-      favorite: false
-    },
-    {
-      id: 2,
-      name: 'Martha Beltrán Roa',
-      description: 'Maquillista profesional especializada en bodas.',
-      rating: 4.3,
-      image: 'images/inicio_trabajo.jpg',
-      favorite: false
-    },
-    {
-      id: 2,
-      name: 'Martha Beltrán Roa',
-      description: 'Maquillista profesional especializada en bodas.',
-      rating: 4.3,
-      image: 'images/inicio_trabajo.jpg',
+      id: 1,
+      name: 'Jorge Cubides Rondon',
+      description: 'Maestro de obra con 15 años de experiencia.',
+      rating: 4.5,
+      image: 'images/imagen1.png',
       favorite: false
     }
+
+
+   
   ];
 
   // Lista de favoritos
   favorites: any[] = [];
+service: any;
 
   // Alternar favoritos
   toggleFavorite(service: any) {

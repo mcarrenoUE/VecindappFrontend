@@ -20,6 +20,8 @@ import { TrabajaNosotrosComponent } from './trabaja-nosotros/trabaja-nosotros.co
 import { ClienteubicacionComponent } from './clienteubicacion/clienteubicacion.component';
 import { RegistrodostrabajadorComponent } from './registrodostrabajador/registrodostrabajador.component';
 import { RegistrotrestrabajadorComponent } from './registrotrestrabajador/registrotrestrabajador.component';
+import { IngresoTrabajadorComponent } from './ingreso-trabajador/ingreso-trabajador.component';
+import { MenuComponent } from './menu/menu.component';
 
 
 
@@ -43,6 +45,8 @@ import { RegistrotrestrabajadorComponent } from './registrotrestrabajador/regist
     ClienteubicacionComponent,
     RegistrodostrabajadorComponent,
     RegistrotrestrabajadorComponent,
+    IngresoTrabajadorComponent,
+    MenuComponent,
    
   ],
   imports: [

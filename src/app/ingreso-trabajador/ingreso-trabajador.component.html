@@ -1,0 +1,31 @@
+<div class="agenda-container">
+    <div class="calendar">
+      <h2>Mi Agenda</h2>
+      <div class="calendar-header">
+        <span>Septiembre 2024</span>
+        <button>&#x25B2;</button>
+        <button>&#x25BC;</button>
+      </div>
+      <div class="calendar-grid">
+        <!-- Aquí va el calendario dinámico -->
+        <span *ngFor="let day of days" [class.today]="day.isToday">{{ day.date }}</span>
+      </div>
+    </div>
+  
+    <div class="events-list">
+      <div class="event" *ngFor="let event of events">
+        <span>{{ event.type }}</span>
+        <span>{{ event.time }}</span>
+        <span>{{ event.location }}</span>
+      </div>
+    </div>
+  
+    <div class="details">
+      <h3>Detalles</h3>
+      <p>Fecha: <strong>{{ selectedEvent.date }}</strong></p>
+      <p>Servicio: <strong>{{ selectedEvent.type }}</strong></p>
+      <p>Hora: <strong>{{ selectedEvent.time }}</strong></p>
+      <p>Dirección: <strong>{{ selectedEvent.location }}</strong></p>
+    </div>
+  </div>
+  

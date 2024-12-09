@@ -43,7 +43,6 @@ header nav ul {
 
 header nav ul li {
     position: relative;
-    /* Para el efecto de subrayado */
 
 }
 
@@ -77,66 +76,134 @@ header nav ul li a {
   }
 
 
-  
+  /* BARRA DE BUSQUEDA */
   .search-section {
     position: relative;
-    padding: 50px 20px;
-    background:  url('/images/aviso5.png') no-repeat center/cover;
-    color: #000000;
-  }
-
-  .search-bar {
-    margin-bottom: 30px;
-  }
-
-  .search-bar input {
-    width: 30%;
-    padding: 5px;
-    font-size: 1.2rem;
-    border-radius: 30px;
-    border: none;
-    margin-bottom: 15px;
-
+    background: url('/images/ingresocliente.png') no-repeat center center; /* Centra la imagen horizontal y verticalmente */
+    background-size: contain; /* Asegura que la imagen completa se muestre */
+    padding: 100px; /* Espaciado interno */
+    height: 100vh; /* Asegura que el contenedor ocupe toda la altura de la pantalla */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centra el contenido verticalmente */
+    align-items: center; /* Centra el contenido horizontalmente */
+    z-index: -1;
     
   }
+  
 
-  .btn-primary {
-    width: 30%;
-    border-radius: 30px;
-    padding: 5px;
-  }
 
+
+  /* CATEGORIAS A LOS LADOS DEL CONTENEDOR DE LA IMAGEN */
   .categories {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-    gap: 20px;
+    position:absolute; /* Fija la posición en la pantalla */
+    top: 50px; /* Ajusta la distancia desde la parte superior */
+    left: 10px; /* Ajusta la distancia desde la parte izquierda */
+    display: flex; /* Cambia a diseño flexible */
+    flex-direction: column; /* Coloca los elementos en una columna */
+    gap: 10px; /* Espacio entre las categorías */
+    padding: 10px; /* Espaciado interno */
+    border-radius: 10px; /* Bordes redondeados */
+    z-index: 1000; /* Asegura que esté encima de otros elementos */
   }
 
   .category {
-    background: rgba(58, 48, 117, 0);
-    padding: 20px;
-    border-radius: 15px;
-    text-align: center;
+    display: flex;
+    align-items: center; /* Alinea los elementos verticalmente */
+    gap: 10px; /* Espacio entre el ícono y el texto */
+    background: #4167D9; /* Fondo transparente */
+    padding: 10px; /* Espaciado interno */
+    border-radius: 8px; /* Bordes redondeados */
     transition: background 0.3s;
   }
-
+  
   .category img {
-    width: 60px;
-    height: 60px;
-    margin-bottom: 10px;
+    width: 40px; /* Ajusta el tamaño del ícono */
+    height: 40px;
   }
-
+  
   .category:hover {
-    background: rgba(255, 255, 255, 0.2);
-
+    background: #3a33a533; /* Fondo al pasar el cursor */
+  }
+  
+  .category p {
+    margin: 0; /* Elimina el margen del texto */
+    color: white; /* Color del texto */
+    font-size: 14px; /* Tamaño del texto */
   }
 
 
+  .categoriess {
+    position: absolute; /* Fija la posición en la pantalla */
+    top: 50px; /* Ajusta la distancia desde la parte superior */
+    right: 10px; /* Coloca las categorías en la esquina derecha */
+    display: flex;
+    flex-direction:column; /* Coloca las categorías una debajo de la otra */
+    gap: 10px; /* Espacio entre categorías */
+    padding: 10px;
+    border-radius: 10px;
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+  }
+  
+  .category2 {
+    display: flex;
+    align-items: center; /* Centra el contenido dentro de cada categoría */
+    gap: 10px; /* Espacio entre la imagen y el texto */
+    background: #4167D9; /* Fondo transparente */
+    padding: 10px; /* Espaciado interno */
+    border-radius: 8px; /* Bordes redondeados */
+    transition: background 0.3s;
+  }
+  
+  .category2 img {
+    width: 40px; /* Tamaño de la imagen */
+    height: 40px;
+  }
+  
+  .category2:hover {
+    background: rgba(255, 255, 255, 0.2); /* Fondo al pasar el cursor */
+  }
+  
+  .category2 p {
+    margin: 0;
+    color: white; /* Color del texto */
+    font-size: 14px; /* Tamaño del texto */
+  }
+  
+/* FILTRO Y BUSQUEDA*/
+.filter-section {
+  display: flex; /* Usar flexbox para alinear elementos */
+  align-items: center; /* Centrar verticalmente los elementos */
+  justify-content: space-between; /* Espacio entre los elementos */
+  padding: 5px; /* Espaciado interno */
 
+  border-radius: 8px; /* Bordes redondeados */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+  
+}
 
+.search-bar {
+  display: flex; /* Usar flexbox para alinear el input y el botón de búsqueda */
+  align-items: center; /* Centrar verticalmente */
+}
 
+.search-bar input {
+  width: 900px; /* Ancho del campo de entrada */
+  padding: 10px; /* Espaciado interno */
+  font-size: 1rem; /* Tamaño de fuente */
+  border-radius: 30px; /* Bordes redondeados */
+  border: 1px solid #ced4da; /* Borde gris claro */
+  margin-right: 10px; /* Espacio entre el input y el botón de búsqueda */
+}
 
+.search-bar button {
+  padding: 10px 20px; /* Espaciado interno del botón */
+  border-radius: 30px; /* Bordes redondeados para el botón de búsqueda */
+}
 
+.btn-outline-primary {
+  margin-left: 15px; /* Espacio a la izquierda del botón de filtros */
+}
 
 
 
@@ -152,69 +219,168 @@ header nav ul li a {
 
 
 /* Cards Section */
+/* Estilo de la sección de trabajadores de la semana */
+.workers-of-the-week {
+  position: relative;
+  text-align: center;
+  padding: 4rem 0;
+  background-color: #f8f9fa;
+  overflow: hidden;
+}
+
+.workers-of-the-week .content-wrapper {
+  z-index: 1;
+  position: relative;
+  animation: fadeIn 2s ease-out;
+}
+
+/* Título de la sección */
+.section-title {
+  font-family: 'Roboto', sans-serif;
+  font-size: 3rem;
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
+  animation: slideInFromLeft 1.5s ease-out;
+}
+
+@keyframes slideInFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Descripción debajo del título */
+.section-description {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.2rem;
+  color: #7f8c8d;
+  margin-bottom: 2rem;
+  animation: fadeIn 2s ease-out 1s;
+}
+
+/* Imagen de fondo */
+.background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('https://example.com/worker-background.jpg'); /* Cambia esto por la URL de la imagen de fondo */
+  background-size: cover;
+  background-position: center;
+  filter: blur(8px);
+  opacity: 0.3;
+  z-index: 0;
+}
+
+/* Cards */
 .service-cards {
-  display: flex; /* Usa Flexbox para alinear las tarjetas en línea */
-  flex-wrap: wrap; /* Permite que las tarjetas bajen a una nueva línea si no caben */
-  gap: 20px; /* Espacio entre las tarjetas */
-  justify-content: center; /* Centra las tarjetas horizontalmente */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  z-index: 1;
+  position: relative;
 }
 
 .card {
-  flex: 0 1 calc(25% - 20px); /* Cada tarjeta ocupa el 25% del ancho, menos el espacio del gap */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para un efecto de elevación */
-  border-radius: 8px; /* Bordes redondeados */
-  overflow: hidden;
-  background-color: white;
+  background: #fff;
+  border: 1px solid #eaeaea;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeInUp 1s ease-out;
 }
-  
-  .card:hover {
-    transform: scale(1.05);
-    box-shadow: 0px 6px 10px #0105ff33;
-    border-color:hsl(249, 98%, 35%);
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
   }
-  
-  .card-body {
-    padding: 20px;
-    text-align: center;
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
-  
-  .service-image {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    margin-bottom: 15px;
-  }
-  
-  .card-title {
-    font-size: 1.25rem;
-    color: #0021b6;
-    margin-bottom: 10px;
-  }
-  
-  .card-text {
-    font-size: 0.9rem;
-    color: #666;
-    margin-bottom: 15px;
-  }
-  
-  .card-rating {
-    font-size: 0.85rem;
-    color: #333;
-    margin-bottom: 15px;
-  }
-  
-  .favorite-btn {
-    background: transparent;
-    border: none;
-    color: #f00;
-    font-size: 1.5rem;
-    cursor: pointer;
-    transition: color 0.3s ease;
-  }
-  
-  .favorite-btn:hover {
-    color: #c00;
-  }
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Imagen de la card */
+.service-image {
+  width: 100%;
+  height: auto;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+/* Títulos de las cards */
+.card-title {
+  font-size: 1.25rem;
+  color: #34495e;
+  margin-top: 0.5rem;
+}
+
+/* Descripción en las cards */
+.card-text {
+  font-size: 1rem;
+  color: #7f8c8d;
+}
+
+/* Calificación */
+.card-rating {
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+  color: #f39c12;
+}
+
+.stars {
+  margin-left: 0.5rem;
+  color: #f1c40f;
+}
+
+/* Botones */
+.btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background: #2980b9;
+}
+
+/* Botón de favoritos */
+.favorite-btn {
+  margin-left: 0.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #e74c3c;
+  font-size: 1.2rem;
+}
+
+.favorite-btn:hover {
+  color: #c0392b;
+}
+
+
   
   /* Icons */
   .fa {

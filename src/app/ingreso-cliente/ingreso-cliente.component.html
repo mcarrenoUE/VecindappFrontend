@@ -3,7 +3,7 @@
     <img src="\images\vecindapp.png" alt="Logo" class="logo me-3" />
     <h1 class="h4 text-white mb-0">¡Bienvenido a VecindApp, {{ userName }}!</h1>
   </div>
-<nav class="d-flex align-items-center">
+  <nav class="d-flex align-items-center">
     <a href="#" class="nav-link d-flex align-items-center">
       <i class="fas fa-home me-2"></i> Inicio
     </a>
@@ -31,18 +31,22 @@
   </nav>
 </header>
 
+<div class="filter-section text-left p-3">
+  <div class="search-bar">
+    <input type="text" class="form-control" placeholder="¿Qué servicio buscas?" />
+    <button class="btn btn-primary mt-3">Buscar</button>
+  </div>
+  <button class="btn btn-outline-primary">
+    <i class="material-icons">filter_list</i> Filtros
+  </button>
+</div>
 
 
-   
+
 <section class="search-section">
-  <video autoplay muted loop class="background-video">
-    <source src="/images/aviso5.png" type="video/mp4">
-  </video>
+
   <div class="container">
-    <div class="search-bar">
-      <input type="text" class="form-control" placeholder="¿Qué servicio buscas?" />
-      <button class="btn btn-primary mt-3">Buscar</button>
-    </div>
+
     <div class="categories d-flex justify-content-center gap-5 flex-wrap">
       <div class="category">
         <img src="/images/hogar.png" alt="Hogar" />
@@ -56,50 +60,60 @@
         <img src="/images/estetica.png" alt="Estética" />
         <p>Estética</p>
       </div>
-      <div class="category">
+    </div>
+  </div>
+
+    <div class="categoriess d-flex justify-content-center gap-5 flex-wrap">
+      <div class="category2">
         <img src="/images/mascotas.png" alt="Mascotas" />
         <p>Mascotas</p>
       </div>
-      <div class="category">
+      <div class="category2">
+        <img src="/images/herramientas.png" alt="Mecánica" />
+        <p>Mecánica</p>
+      </div>
+      <div class="category2">
         <img src="/images/herramientas.png" alt="Mecánica" />
         <p>Mecánica</p>
       </div>
     </div>
+    
+</section>
+
+
+<!-- Incluye Material Icons en tu proyecto -->
+
+
+
+<section class="workers-of-the-week">
+  <div class="content-wrapper">
+    <h2 class="section-title">🎉 Nuestros Trabajadores de la Semana 🎉</h2>
+    <p class="section-description">Descubre a los profesionales más destacados en nuestra plataforma, valorados por su dedicación y calidad de servicio.</p>
+  </div>
+  <div class="background-image"></div>
+</section>
+
+<section class="service-cards container mt-5">
+  <div class="card" *ngFor="let service of services">
+    <div class="card-body">
+      <img [src]="service.image" alt="Imagen del Trabajador" class="service-image" />
+      <h5 class="card-title">{{ service.name }}</h5>
+      <p class="card-text">{{ service.description }}</p>
+      <p class="card-rating">
+        Calificación: {{ service.rating }}
+        <span class="stars">⭐⭐⭐⭐⭐</span>
+      </p>
+      <button class="btn btn-primary">Contactar</button>
+      <button class="favorite-btn" (click)="toggleFavorite(service)">
+        <i [ngClass]="{ 'fa-heart': service.favorite, 'fa-heart-o': !service.favorite }" class="fa"></i>
+      </button>
+    </div>
   </div>
 </section>
 
-  
-   <!-- Incluye Material Icons en tu proyecto -->
 
-
-<div class="filter-section text-left p-3">
-  <button class="btn btn-outline-primary">
-    <i class="material-icons">filter_list</i> Filtros
-  </button>
-</div>
-
-
-  
-<h1>NUESTROS TRABAJADORES DE LA SEMANA</h1>
-        <section class="service-cards container mt-5">
-            <div class="card" *ngFor="let service of services">
-              <div class="card-body">
-                <img [src]="service.image" alt="Service Image" class="service-image" />
-                <h5 class="card-title">{{ service.name }}</h5>
-                <p class="card-text">{{ service.description }}</p>
-                <p class="card-rating">
-                  Calificación: {{ service.rating }}
-                  <span class="star">⭐⭐⭐⭐⭐</span>
-                </p>
-                <button class="btn btn-primary">Contactar</button>
-                <button class="favorite-btn" (click)="toggleFavorite(service)">
-                  <i [ngClass]="{ 'fa-heart': service.favorite, 'fa-heart-o': !service.favorite }" class="fa"></i>
-                </button>
-              </div>
-            </div>
-          </section><br><br>
           
-          <section class="featured-services text-center py-5">
+        <!--   <section class="featured-services text-center py-5">
             <h2 class="mb-4">¡Servicios Recomendados para Ti!</h2>
             <div class="d-flex flex-wrap justify-content-center gap-5">
               <div class="service-box">
@@ -165,11 +179,12 @@
                   <p>Desde reparaciones hasta remodelaciones, encuentra expertos en tu vecindario.</p>
                 </div>
               </div>
-              
+               -->
               <!-- Más tarjetas -->
-            </div>
+<!--   </div>
           </section>
           
       
 
   <app-footer></app-footer>
+ --> -->
