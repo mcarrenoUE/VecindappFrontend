@@ -13,19 +13,21 @@ import { FooterComponent } from './footer/footer.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { IniciotrabajadorComponent } from './iniciotrabajador/iniciotrabajador.component';
 import { RegistrotrabajadorComponent } from './registrotrabajador/registrotrabajador.component';
-import { environment } from '../environment';
 import { SobreNosotrosComponent } from './sobre-nosotros/sobre-nosotros.component';
 import { IngresoClienteComponent } from './ingreso-cliente/ingreso-cliente.component';
 import { TrabajaNosotrosComponent } from './trabaja-nosotros/trabaja-nosotros.component';
 import { ClienteubicacionComponent } from './clienteubicacion/clienteubicacion.component';
 import { RegistrodostrabajadorComponent } from './registrodostrabajador/registrodostrabajador.component';
 import { RegistrotrestrabajadorComponent } from './registrotrestrabajador/registrotrestrabajador.component';
-import { IngresoTrabajadorComponent } from './ingreso-trabajador/ingreso-trabajador.component';
+
 import { MenuComponent } from './menu/menu.component';
+import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
 
 
-
-
+import { AngularFireModule } from '@angular/fire/compat';
+import { AngularFireAuthModule } from '@angular/fire/compat/auth';
+import { environment } from '../environment/environment';
+import { IngresoTrabajadorComponent } from './ingreso-trabajador/ingreso-trabajador.component';
 
 @NgModule({
   declarations: [
@@ -45,20 +47,20 @@ import { MenuComponent } from './menu/menu.component';
     ClienteubicacionComponent,
     RegistrodostrabajadorComponent,
     RegistrotrestrabajadorComponent,
-    IngresoTrabajadorComponent,
+
     MenuComponent,
-   
+      IngresoTrabajadorComponent,
   ],
   imports: [
-
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    FormsModule
-
+    FormsModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFireAuthModule, 
+    BsDatepickerModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent],
- 
 })
 export class AppModule { }

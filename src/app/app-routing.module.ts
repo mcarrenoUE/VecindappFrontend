@@ -14,8 +14,9 @@ import { TrabajaNosotrosComponent } from './trabaja-nosotros/trabaja-nosotros.co
 import { ClienteubicacionComponent } from './clienteubicacion/clienteubicacion.component';
 import { RegistrodostrabajadorComponent } from './registrodostrabajador/registrodostrabajador.component';
 import { RegistrotrestrabajadorComponent } from './registrotrestrabajador/registrotrestrabajador.component';
-import { IngresoTrabajadorComponent } from './ingreso-trabajador/ingreso-trabajador.component';
+
 import { MenuComponent } from './menu/menu.component';
+import { IngresoTrabajadorComponent } from './ingreso-trabajador/ingreso-trabajador.component';
 
 
 
@@ -36,6 +37,7 @@ const routes: Routes = [
   { path: 'registrodostrabajador', component: RegistrodostrabajadorComponent},
   { path: 'registrotrestrabajador', component: RegistrotrestrabajadorComponent},
   { path: 'ingreso-trabajador', component: IngresoTrabajadorComponent},
+  
   { path: 'menu', component: MenuComponent}
 
   

@@ -30,15 +30,18 @@
         </div>
       </div>
 
+      <button type="submit" [routerLink]="['/ingreso-cliente']" class="btn btn-primary w-100" [disabled]="loginForm.invalid">Iniciar Sesión</button>
       <div class="options">
         <br><a routerLink="#">¿Olvidó su contraseña? Recupérela aquí</a>
-        <br><a routerLink="/registro">¿Sin cuenta? Créala ahora mismo</a><br>
-      </div><br>
-
-      <button [routerLink]="'/ingreso-cliente'" type="submit" class="btn btn-primary w-100"
-        [disabled]="loginForm.invalid">Iniciar Sesión</button>
+        <br><a routerLink="/registro">¿Sin cuenta? Créala ahora mismo</a>
+      </div>
     </form>
-
+    <p>o inicia con</p>
+    <div class="button-container">
+      <button (click)="loginWithGoogle()"     class="gmail-button">
+        <img src="images/gmail.webp" alt="Gmail Icon" class="gmail-icon"> Inicia sesión con Gmail
+      </button>
+    </div>
     <br><a routerLink="/iniciotrabajador">Soy Trabajador</a><br>
   </div>
   <div class="image-container">

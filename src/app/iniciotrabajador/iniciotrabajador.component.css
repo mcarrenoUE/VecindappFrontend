@@ -45,7 +45,46 @@ header {
   /* Ajusta la posición más cerca del h2 */
 }
 
+/* GMAIL */
 
+/* GMAIL */
+p {
+  color: #1d21e2;
+  text-align: center;
+  font-size: small;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.gmail-button {
+  display: flex;
+  align-items: center;
+  background-color: #ffffff;
+  color: #fa1a1a;
+  border-color: #ffffff;
+  border: #007bff;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 14px;
+  justify-content: center;
+  text-align: center;
+}
+
+.gmail-button:hover {
+  border-color: #fa1a1a;
+
+}
+
+.gmail-icon {
+  width: 20px;
+  height: auto;
+  margin-right: 8px;
+}
 
 .form-container h1 {
   margin-bottom: 20px;

@@ -25,7 +25,8 @@ header {
 .container {
   display: flex;
   flex-wrap: wrap;
-  align-items: flex-start; /* Alinea los elementos en la parte superior */
+  align-items: flex-start;
+  /* Alinea los elementos en la parte superior */
   justify-content: space-between;
   padding: 50px;
   height: calc(100vh - 80px);
@@ -37,9 +38,11 @@ header {
   padding: 40px;
   border-radius: 10px;
   box-shadow: 0 4px 10px hwb(239 18% 37% / 0.671);
-  margin-top: 20px; /* Asegura separación entre secciones */
-  transform: translateY(-110px); /* Ajusta la posición más cerca del h2 */
-  
+  margin-top: 20px;
+  /* Asegura separación entre secciones */
+  transform: translateY(-110px);
+  /* Ajusta la posición más cerca del h2 */
+
 }
 
 
@@ -49,7 +52,7 @@ header {
   color: hsl(239, 77%, 50%);
   font-weight: 600;
   text-align: center;
-  
+
 }
 
 .btn-primary {
@@ -69,11 +72,12 @@ header {
 
 .register-box .worker-link {
   display: block;
-  text-align:center;
+  text-align: center;
   margin-top: 15px;
   color: #0a0099;
   text-decoration: line;
 }
+
 .register-box .worker-link:hover {
   text-decoration: underline;
 }
@@ -83,25 +87,67 @@ header {
   width: 79%;
   border-radius: 10px;
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-  transform: translateY(-100px); /* Ajusta la posición más cerca del h2 */
+  transform: translateY(-100px);
+  /* Ajusta la posición más cerca del h2 */
 }
 
 .options {
-  font-size: 12px; /* Ajusta el tamaño de la fuente a 12px */
-  line-height: 1.5; /* Espaciado entre líneas */
+  font-size: 12px;
+  /* Ajusta el tamaño de la fuente a 12px */
+  line-height: 1.5;
+  /* Espaciado entre líneas */
 }
 
 .options a {
-  color: #007bff; /* Color del enlace */
-  text-decoration: none; /* Sin subrayado */
+  color: #007bff;
+  /* Color del enlace */
+  text-decoration: none;
+  /* Sin subrayado */
 }
 
 .options a:hover {
-  text-decoration: underline; /* Subrayar al pasar el ratón */
+  text-decoration: underline;
+  /* Subrayar al pasar el ratón */
 }
 
+/* GMAIL */
+p {
+  color: #1d21e2;
+  text-align: center;
+  font-size: small;
+}
 
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
+}
+
+.gmail-button {
+  display: flex;
+  align-items: center;
+  background-color: #ffffff;
+  color: #fa1a1a;
+  border-color: #ffffff;
+  border: #007bff;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 14px;
+  justify-content: center;
+  text-align: center;
+}
+
+.gmail-button:hover {
+  border-color: #fa1a1a;
+
+}
+
+.gmail-icon {
+  width: 20px;
+  height: auto;
+  margin-right: 8px;
+}
 
 /*   BURBUJITAS EN LA PANTALLA, SE REALIZAN CON DIV  */
 /* General styles for blobs */
@@ -168,7 +214,8 @@ header {
   background-color: #4167D9;
   z-index: 1;
 }
-.blob-7{
+
+.blob-7 {
   width: 60px;
   height: 60px;
   top: 60%;
@@ -178,7 +225,7 @@ header {
   z-index: 10;
 }
 
-.blob-8{
+.blob-8 {
   width: 30px;
   height: 30px;
   top: 60%;
@@ -187,4 +234,3 @@ header {
   transform: translate(-10%, 60%);
   z-index: 10;
 }
-
