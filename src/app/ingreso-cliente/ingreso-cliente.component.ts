@@ -7,6 +7,8 @@ import { Router } from '@angular/router';
   templateUrl: './ingreso-cliente.component.html',
   styleUrls: ['./ingreso-cliente.component.css']
 })
+
+
 export class IngresoClienteComponent {
   userName: string = '';
 

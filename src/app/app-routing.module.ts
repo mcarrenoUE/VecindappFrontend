@@ -17,6 +17,7 @@ import { RegistrotrestrabajadorComponent } from './registrotrestrabajador/regist
 
 import { MenuComponent } from './menu/menu.component';
 import { IngresoTrabajadorComponent } from './ingreso-trabajador/ingreso-trabajador.component';
+import { RegistrarClienteComponent } from './registrar-cliente/registrar-cliente.component';
 import { ServiciosOfrecerComponent } from './servicios-ofrecer/servicios-ofrecer.component';
 import { WorkerProfileComponent } from './worker-profile/worker-profile.component';
 import { ChatComponent } from './chat/chat.component';
@@ -42,6 +43,7 @@ const routes: Routes = [
   { path: 'registrodostrabajador', component: RegistrodostrabajadorComponent},
   { path: 'registrotrestrabajador', component: RegistrotrestrabajadorComponent},
   { path: 'ingreso-trabajador', component: IngresoTrabajadorComponent},
+  {path: 'crear-usuario', component: RegistrarClienteComponent},
   
   { path: 'menu', component: MenuComponent},
   { path: 'servicios-ofrecer', component: ServiciosOfrecerComponent},

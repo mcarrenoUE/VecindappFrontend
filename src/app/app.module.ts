@@ -19,6 +19,7 @@ import { TrabajaNosotrosComponent } from './trabaja-nosotros/trabaja-nosotros.co
 import { ClienteubicacionComponent } from './clienteubicacion/clienteubicacion.component';
 import { RegistrodostrabajadorComponent } from './registrodostrabajador/registrodostrabajador.component';
 import { RegistrotrestrabajadorComponent } from './registrotrestrabajador/registrotrestrabajador.component';
+import { provideHttpClient } from '@angular/common/http';
 
 import { MenuComponent } from './menu/menu.component';
 import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
@@ -33,6 +34,12 @@ import { ServiciosOfrecerComponent } from './servicios-ofrecer/servicios-ofrecer
 import { WorkerProfileComponent } from './worker-profile/worker-profile.component';
 import { ChatComponent } from './chat/chat.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { LoginInterceptorService } from './services/Autenticacion/login-interceptor.service';
+import { RegistrarClienteComponent } from './registrar-cliente/registrar-cliente.component';
+
+
 
 @NgModule({
   declarations: [
@@ -55,6 +62,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 
     MenuComponent,
       IngresoTrabajadorComponent,
+      RegistrarClienteComponent,
+
       PerfilTrabajadorComponent,
       ServiciosOfrecerComponent,
       WorkerProfileComponent,
@@ -71,7 +80,12 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     AngularFireAuthModule, 
     BsDatepickerModule.forRoot()
   ],
-  providers: [],
+  providers: [
+    { 
+      provide: HTTP_INTERCEPTORS, useClass:LoginInterceptorService, multi: true
+    },
+    provideHttpClient()
+  ],
   bootstrap: [AppComponent],
   
 })
