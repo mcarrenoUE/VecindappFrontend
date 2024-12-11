@@ -100,7 +100,7 @@
         Calificación: {{ service.rating }}
         <span class="stars">⭐⭐⭐⭐⭐</span>
       </p>
-      <button class="btn btn-primary">Contactar</button>
+      <button  [routerLink]="['/perfil-trabajador']" class="btn btn-primary">Contactar</button>
       <button class="favorite-btn" (click)="toggleFavorite(service)">
         <i [ngClass]="{ 'fa-heart': service.favorite, 'fa-heart-o': !service.favorite }" class="fa"></i>
       </button>

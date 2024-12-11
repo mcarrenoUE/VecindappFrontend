@@ -20,6 +20,7 @@ import { IngresoTrabajadorComponent } from './ingreso-trabajador/ingreso-trabaja
 import { ServiciosOfrecerComponent } from './servicios-ofrecer/servicios-ofrecer.component';
 import { WorkerProfileComponent } from './worker-profile/worker-profile.component';
 import { ChatComponent } from './chat/chat.component';
+import { PerfilTrabajadorComponent } from './perfil-trabajador/perfil-trabajador.component';
 
 
 
@@ -45,6 +46,7 @@ const routes: Routes = [
   { path: 'servicios-ofrecer', component: ServiciosOfrecerComponent},
   { path: 'worker/:id', component: WorkerProfileComponent },
   { path: 'chat/:id', component: ChatComponent },
+  { path: 'perfil-trabajador', component: PerfilTrabajadorComponent}
 
   
 ];
