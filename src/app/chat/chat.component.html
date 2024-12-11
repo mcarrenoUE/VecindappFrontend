@@ -1,1 +1,47 @@
-<p>chat works!</p>
+<div class="chat-container">
+  <!-- Lista de mensajes -->
+  <div class="messages">
+    <div *ngFor="let message of messages" class="message" [ngClass]="getMessageAlignment()">
+      <span>{{ message.contenido }}</span>
+    </div>
+  </div>
+
+  <!-- Formulario para enviar un mensaje -->
+  <div class="message-input-container">
+    <form [formGroup]="form" (ngSubmit)="sendMessage()" class="message-form">
+      <input 
+        class="message-input" 
+        formControlName="message" 
+        placeholder="Escribe tu mensaje..." 
+      />
+      <button 
+        class="send-button" 
+        type="submit" 
+        [disabled]="form.get('message')?.invalid">
+        Enviar
+      </button>
+    </form>
+  </div>
+
+  <!-- Botón para abrir el popup (solo visible para el cliente) -->
+  <button *ngIf="getRolId() === '3'" class="price-button" (click)="openPricePopup()">
+    Proponer precio
+  </button>
+
+  <!-- Popup para ingresar el precio -->
+  <div *ngIf="isPopupOpen" class="popup-overlay">
+    <div class="popup-content">
+      <h3>Proponer un precio</h3>
+      <input 
+        type="number" 
+        class="price-input" 
+        [(ngModel)]="proposedPrice" 
+        placeholder="Introduce el precio" 
+      />
+      <div class="popup-buttons">
+        <button class="popup-button submit" (click)="submitPrice()">Enviar</button>
+        <button class="popup-button cancel" (click)="closePopup()">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>

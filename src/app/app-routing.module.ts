@@ -27,7 +27,8 @@ import { PerfilTrabajadorComponent } from './perfil-trabajador/perfil-trabajador
 
 const routes: Routes = [
 
-  { path: 'Home', component: HomeComponent },
+  { path: '', component: HomeComponent },
+  { path: 'chat/:chatId', component: ChatComponent },
   { path: 'inicio', component: InicioComponent},
   { path: 'registro', component: RegistroComponent },
   { path: 'buscar-servicios', component: BuscarServiciosComponent},

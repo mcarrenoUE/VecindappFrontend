@@ -1,0 +1,184 @@
+/* Estilos generales */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .chat-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(135deg, #e0c3fc, #8ec5fc); /* Morado pastel y azul */
+    font-family: Arial, sans-serif;
+    color: #333;
+    overflow: hidden;
+  }
+  
+  /* Lista de mensajes */
+  .messages {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco translúcido */
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+  }
+  
+  .message {
+    display: inline-block;
+    padding: 10px 15px;
+    margin: 10px 0;
+    max-width: 75%;
+    border-radius: 20px;
+    word-wrap: break-word;
+  }
+  
+  .message.left {
+    background-color: #d1c4e9; /* Morado claro */
+    align-self: flex-start;
+  }
+  
+  .message.right {
+    background-color: #8ec5fc; /* Azul pastel */
+    color: white;
+    align-self: flex-end;
+  }
+  
+  /* Formulario para enviar mensaje */
+  .message-input-container {
+    padding: 15px;
+    background-color: #d1c4e9; /* Morado claro */
+    border-top: 1px solid #ccc;
+  }
+  
+  .message-form {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .message-input {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    outline: none;
+    background-color: white;
+  }
+  
+  .send-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    background-color: #8e44ad; /* Morado intenso */
+    color: white;
+    cursor: pointer;
+  }
+  
+  .send-button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  /* Botón para proponer precio */
+  .price-button {
+    margin: 10px auto;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    background-color: #8e44ad; /* Morado intenso */
+    color: white;
+    cursor: pointer;
+  }
+  
+  /* Popup para proponer precio */
+  .popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Fondo oscuro translúcido */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .popup-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  }
+  
+  .price-input {
+    width: 80%;
+    padding: 10px;
+    margin: 15px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+  }
+  
+  .popup-buttons {
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+  }
+  
+  .popup-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+  }
+  
+  .popup-button.submit {
+    background-color: #8ec5fc; /* Azul pastel */
+    color: white;
+  }
+  
+  .popup-button.cancel {
+    background-color: #d1c4e9; /* Morado claro */
+    color: white;
+  }
+
+  /* Contenedor de mensajes */
+.messages {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco translúcido */
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    display: flex;
+    flex-direction: column; /* Asegura que los hijos se coloquen uno debajo del otro */
+    gap: 10px; /* Espacio entre mensajes */
+  }
+  
+  /* Estilos de los mensajes */
+  .message {
+    display: block; /* Asegura que cada mensaje ocupe una fila completa */
+    padding: 10px 15px;
+    margin: 5px 0; /* Espacio vertical entre mensajes */
+    max-width: 75%; /* Limita el ancho de los mensajes */
+    border-radius: 20px;
+    word-wrap: break-word;
+  }
+  
+  .message.left {
+    background-color: #d1c4e9; /* Morado claro */
+    align-self: flex-start; /* Alinea los mensajes del receptor a la izquierda */
+  }
+  
+  .message.right {
+    background-color: #8ec5fc; /* Azul pastel */
+    color: white;
+    align-self: flex-end; /* Alinea los mensajes del remitente a la derecha */
+  }
+  
+  
