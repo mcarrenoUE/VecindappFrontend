@@ -75,11 +75,24 @@ header nav ul li a {
     text-decoration: underline;
   }
   
-  .user-avatar {
-    width: 40px;
-    border-radius: 50%;
+  .btn-logout {
+    background-color: hwb(0 100% 0%);
+    color: hsl(298, 71%, 42%);
+    border: none;
+    padding: 8px 15px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
   }
-
+  
+  .btn-logout:hover {
+    background-color: hsl(298, 71%, 42%);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    color: #ffffff
+    ;
+  }
 
 
   /* aqui la agenda */

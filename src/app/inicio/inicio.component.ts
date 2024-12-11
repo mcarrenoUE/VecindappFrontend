@@ -12,7 +12,7 @@ export class InicioComponent {
   loginForm: FormGroup;
 
   constructor(private fb: FormBuilder, private auth: AngularFireAuth) {
-    // Inicializar el formulario con validaciones
+    
     this.loginForm = this.fb.group({
       email: ['', [Validators.required, Validators.email]],
       password: ['',[Validators.required, Validators.minLength(8), Validators.maxLength(20)],

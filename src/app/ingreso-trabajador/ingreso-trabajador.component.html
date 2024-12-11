@@ -16,19 +16,16 @@
             <i class="fas fa-envelope me-2"></i> Mensajes
           </a>
           <a href="#" class="nav-link d-flex align-items-center">
-            <i class="fas fa-heart me-2"></i> Favoritos
-          </a>
-          <a href="#" class="nav-link d-flex align-items-center">
             <i class="fas fa-calendar-alt me-2"></i> Agenda
           </a>
           <a href="#" class="nav-link d-flex align-items-center">
             <i class="fas fa-tools me-2"></i> Servicios
           </a>
       
-          <!-- Avatar y nombre del usuario -->
-          <div class="d-flex align-items-center ms-3">
-            <img src="\images\hello.gif" alt="Avatar" class="user-avatar me-2" />
-            <span id="user-name" class="text-white"></span>
+          <div class="logout-container d-flex align-items-center ms-3">
+            <button class="btn btn-logout" (click)="logout()">
+              Cerrar Sesión
+            </button>
           </div>
         </nav>
       </header>
