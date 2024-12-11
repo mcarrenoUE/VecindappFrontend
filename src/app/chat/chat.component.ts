@@ -11,6 +11,9 @@ import { Observable } from 'rxjs';
   styleUrl: './chat.component.css'
 })
 export class ChatComponent implements OnInit {
+logout() {
+throw new Error('Method not implemented.');
+}
   form!: FormGroup;
   roomId: string = "";// Este ID debe ser dinámico, extraído de la URL o contexto
   chatId: number = 0; // ID del chat para obtener los mensajes
