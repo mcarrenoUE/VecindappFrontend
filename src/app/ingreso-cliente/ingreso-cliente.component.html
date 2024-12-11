@@ -1,7 +1,7 @@
 <header class="main-header d-flex justify-content-between align-items-center p-3">
   <div class="d-flex align-items-center">
     <img src="\images\vecindapp.png" alt="Logo" class="logo me-3" />
-    <h1 class="h4 text-white mb-0">¡Bienvenido a VecindApp, {{ userName }}!</h1>
+    <h1 class="h4 text-white mb-0">¡Bienvenido a VecindApp!</h1>
   </div>
   <nav class="d-flex align-items-center">
     <a href="#" class="nav-link d-flex align-items-center">
@@ -23,74 +23,60 @@
       <i class="fas fa-tools me-2"></i> Servicios
     </a>
 
-    <!-- Avatar y nombre del usuario -->
-    <div class="d-flex align-items-center ms-3">
-      <img src="\images\hello.gif" alt="Avatar" class="user-avatar me-2" />
-      <span id="user-name" class="text-white"></span>
+    
+    <div class="logout-container d-flex align-items-center ms-3">
+      <button class="btn btn-logout" (click)="logout()">
+        Cerrar Sesión
+      </button>
     </div>
   </nav>
 </header>
 
-<div class="filter-section text-left p-3">
-  <div class="search-bar">
-    <input type="text" class="form-control" placeholder="¿Qué servicio buscas?" />
-    <button class="btn btn-primary mt-3">Buscar</button>
-  </div>
-  <button class="btn btn-outline-primary">
-    <i class="material-icons">filter_list</i> Filtros
-  </button>
-</div>
-
-
-
 <section class="search-section">
-
   <div class="container">
-
     <div class="categories d-flex justify-content-center gap-5 flex-wrap">
-      <div class="category">
+      <button class="category">
         <img src="/images/hogar.png" alt="Hogar" />
         <p>Hogar</p>
-      </div>
-      <div class="category">
+      </button>
+      <button class="category">
         <img src="/images/limpieza.png" alt="Limpieza" />
         <p>Limpieza</p>
-      </div>
-      <div class="category">
+      </button>
+      <button class="category">
         <img src="/images/estetica.png" alt="Estética" />
         <p>Estética</p>
-      </div>
+      </button>
     </div>
   </div>
 
-    <div class="categoriess d-flex justify-content-center gap-5 flex-wrap">
-      <div class="category2">
-        <img src="/images/mascotas.png" alt="Mascotas" />
-        <p>Mascotas</p>
-      </div>
-      <div class="category2">
-        <img src="/images/herramientas.png" alt="Mecánica" />
-        <p>Mecánica</p>
-      </div>
-      <div class="category2">
-        <img src="/images/herramientas.png" alt="Mecánica" />
-        <p>Mecánica</p>
-      </div>
-    </div>
-    
+  <div class="categoriess d-flex justify-content-center gap-5 flex-wrap">
+    <button class="category2">
+      <img src="/images/mascotas.png" alt="Mascotas" />
+      <p>Mascotas</p>
+    </button>
+    <button class="category2">
+      <img src="/images/herramientas.png" alt="Mecánica" />
+      <p>Mecánica</p>
+    </button>
+    <button class="category2">
+      <img src="/images/inicio1.png" alt="Mecánica" />
+      <p>Amigos</p>
+    </button>
+  </div>
 </section>
 
 
+
+
 <!-- Incluye Material Icons en tu proyecto -->
-
-
 
 <section class="workers-of-the-week">
   <div class="content-wrapper">
     <h2 class="section-title">🎉 Nuestros Trabajadores de la Semana 🎉</h2>
     <p class="section-description">Descubre a los profesionales más destacados en nuestra plataforma, valorados por su dedicación y calidad de servicio.</p>
   </div>
-  <div class="background-image"></div>
+ 
 </section>
 
 <section class="service-cards container mt-5">
@@ -103,88 +89,45 @@
         Calificación: {{ service.rating }}
         <span class="stars">⭐⭐⭐⭐⭐</span>
       </p>
-      <button class="btn btn-primary">Contactar</button>
+      <button  [routerLink]="['/perfil-trabajador']" class="btn btn-primary">Contactar</button>
       <button class="favorite-btn" (click)="toggleFavorite(service)">
         <i [ngClass]="{ 'fa-heart': service.favorite, 'fa-heart-o': !service.favorite }" class="fa"></i>
       </button>
     </div>
+
+  </div>
+</section>
+
+<section class="testimonials mt-5">
+  <h2 class="section-title">Testimonios de Clientes</h2>
+  <div class="testimonial-cards">
+    <div class="testimonial-card" *ngFor="let testimonial of testimonials">
+      <div class="testimonial-content">
+        <!-- Icono de la persona -->
+        <div class="testimonial-icon">
+          <i class="fa fa-user-circle" aria-hidden="true"></i> <!-- Icono de usuario -->
+        </div>
+        <p class="testimonial-text">{{ testimonial.feedback }}</p>
+        <p class="testimonial-name">
+          <span class="testimonial-icon-name">- </span>{{ testimonial.name }}
+        </p>
+      </div>
+    </div>
+  </div>
+  
+</section>
+
+
+    
+<section class="faq-section mt-5">
+  <h2 class="section-title">Preguntas Frecuentes</h2>
+  <div class="faq-item" *ngFor="let faq of faqs">
+    <h5 class="faq-question">{{ faq.question }}</h5>
+    <p class="faq-answer">{{ faq.answer }}</p>
   </div>
 </section>
 
 
-          
-        <!--   <section class="featured-services text-center py-5">
-            <h2 class="mb-4">¡Servicios Recomendados para Ti!</h2>
-            <div class="d-flex flex-wrap justify-content-center gap-5">
-              <div class="service-box">
-                <img src="/images/limpieza.png" alt="Limpieza">
-                <h4>Limpieza Profesional</h4>
-                <p>Desde $20/hora</p>
-              </div>
-              <div class="service-box">
-                <img src="/images/mascotas.png" alt="Mascotas">
-                <h4>Cuidado de Mascotas</h4>
-                <p>¡Tu mejor amigo en buenas manos!</p>
-              </div>
-              <div class="service-box">
-                <img src="/images/limpieza.png" alt="Limpieza">
-                <h4>Limpieza Profesional</h4>
-                <p>Desde $20/hora</p>
-              </div>
-              <div class="service-box">
-                <img src="/images/mascotas.png" alt="Mascotas">
-                <h4>Cuidado de Mascotas</h4>
-                <p>¡Tu mejor amigo en buenas manos!</p>
-              </div>
-            </div>
-          </section>
-          
-          <section class="categories container my-5">
-            <h2 class="text-center mb-4">Explora Nuestros Servicios</h2>
-            <div class="d-flex flex-wrap justify-content-center gap-4">
-              <div class="category-card">
-                <div class="card-front">
-                  <img src="/images/hogar.png" alt="Hogar">
-                  <h3>Hogar</h3>
-                </div>
-                <div class="card-back">
-                  <p>Desde reparaciones hasta remodelaciones, encuentra expertos en tu vecindario.</p>
-                </div>
-              </div>
-
-              <div class="category-card">
-                <div class="card-front">
-                  <img src="/images/hogar.png" alt="Hogar">
-                  <h3>Hogar</h3>
-                </div>
-                <div class="card-back">
-                  <p>Desde reparaciones hasta remodelaciones, encuentra expertos en tu vecindario.</p>
-                </div>
-              </div>
-              <div class="category-card">
-                <div class="card-front">
-                  <img src="/images/hogar.png" alt="Hogar">
-                  <h3>Hogar</h3>
-                </div>
-                <div class="card-back">
-                  <p>Desde reparaciones hasta remodelaciones, encuentra expertos en tu vecindario.</p>
-                </div>
-              </div>
-              <div class="category-card">
-                <div class="card-front">
-                  <img src="/images/hogar.png" alt="Hogar">
-                  <h3>Hogar</h3>
-                </div>
-                <div class="card-back">
-                  <p>Desde reparaciones hasta remodelaciones, encuentra expertos en tu vecindario.</p>
-                </div>
-              </div>
-               -->
-              <!-- Más tarjetas -->
-<!--   </div>
-          </section>
-          
-      
 
   <app-footer></app-footer>
- --> -->
+ 

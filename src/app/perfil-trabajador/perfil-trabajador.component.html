@@ -1,0 +1,106 @@
+
+<header class="main-header d-flex justify-content-between align-items-center p-3">
+    <div class="d-flex align-items-center">
+      <img src="\images\vecindapp.png" alt="Logo" class="logo me-3" />
+      <h1 class="h4 text-white mb-0">¡Bienvenido a VecindApp!</h1>
+    </div>
+    <nav class="d-flex align-items-center">
+      <a href="#" class="nav-link d-flex align-items-center">
+        <i class="fas fa-home me-2"></i> Inicio
+      </a>
+      <a href="#" class="nav-link d-flex align-items-center">
+        <i class="fas fa-bell me-2"></i> Notificaciones
+      </a>
+      <a href="#" class="nav-link d-flex align-items-center">
+        <i class="fas fa-envelope me-2"></i> Mensajes
+      </a>
+      <a href="#" class="nav-link d-flex align-items-center">
+        <i class="fas fa-heart me-2"></i> Favoritos
+      </a>
+      <a href="#" class="nav-link d-flex align-items-center">
+        <i class="fas fa-calendar-alt me-2"></i> Agenda
+      </a>
+      <a href="#" class="nav-link d-flex align-items-center">
+        <i class="fas fa-tools me-2"></i> Servicios
+      </a>
+  
+      <!-- Avatar y nombre del usuario -->
+      <div class="d-flex align-items-center ms-3">
+        <img src="\images\hello.gif" alt="Avatar" class="user-avatar me-2" />
+        <span id="user-name" class="text-white"></span>
+      </div>
+    </nav>
+  </header>
+
+  <div class="perfil-trabajador">
+ 
+    <div class="encabezado">
+     
+      <img class="foto-perfil" src="/images/PLOMEROLINDO.jpg" alt="Foto del trabajador">
+      <div class="informacion">
+        <div class="informacion-volver">
+        <a [routerLink]="['/ingreso-cliente']" class="volver">Volver</a>
+      </div>
+        <h2>Jorge Cubides Rondón</h2>
+        <p class="titulo">Maestro de obra</p>
+        <p class="calificacion">⭐⭐⭐⭐⭐Calificación: 4.5</p>
+        <button class="contactar-btn">Contáctame</button>
+      </div>
+      <button class="favorite-btn" (click)="toggleFavorite(service)">
+        <i [ngClass]="{ 'fa-heart': service.favorite, 'fa-heart-o': !service.favorite }" class="fa"></i>
+      </button>
+    </div>
+  
+    <div class="contenido">
+      <div class="sobre-mi">
+        <h3>Sobre mí</h3>
+        <p>
+          Hola, me llamo Jorge Cubides. Soy maestro de obra con más de 15 años de experiencia.
+          Me especializo en remodelaciones y construcción de casas, entre otros proyectos.
+          Puedes confiar para mejorar o construir tu casa, aquí estoy para ayudarte.
+        </p>
+      </div>
+  
+      <div class="habilidades">
+        <h3>Habilidades</h3>
+        <ul class="tags">
+          <li>Fontanería</li>
+          <li>Plomería</li>
+          <li>Enchape</li>
+        </ul>
+      </div>
+  
+      <div class="servicios-realizados">
+        <h3>Servicios Realizados</h3>
+  
+        <div class="servicio">
+          <h4>Remodelación de Cocina</h4>
+          <p>
+            Diseño de remodelación para optimizar espacio en cocinas modernas,
+            utilizando acabados de alta calidad.
+          </p>
+          <div class="imagenes">
+            <img src="/images/cocina.jpg" alt="Cocina remodelada">
+            <img src="/images/cocina2.jpg" alt="Detalle de cocina">
+            <img src="/images/cocina3.jpg" alt="Proceso de trabajo">
+          </div>
+        </div>
+  
+        <div class="servicio">
+          <h4>Construcción de Terraza</h4>
+          <p>
+            Construcción de terrazas elegantes y modernas con materiales
+            duraderos, diseñadas para disfrutar del aire libre.
+          </p>
+          <div class="imagenes">
+            <img src="/images/terraza1.jpg" alt="Terraza construida">
+            <img src="/images/terraza2.jpg" alt="Detalle de terraza">
+            <img src="/images/terraza3.jpg" alt="Proceso de trabajo">
+          </div>
+        </div>
+      </div>
+  
+      <button class="ver-mas">Ver más</button>
+    </div>
+  </div>
+ <app-footer></app-footer> 

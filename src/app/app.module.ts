@@ -29,6 +29,10 @@ import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { environment } from '../environment/environment';
 import { IngresoTrabajadorComponent } from './ingreso-trabajador/ingreso-trabajador.component';
+import { PerfilTrabajadorComponent } from './perfil-trabajador/perfil-trabajador.component';
+import { ServiciosOfrecerComponent } from './servicios-ofrecer/servicios-ofrecer.component';
+import { WorkerProfileComponent } from './worker-profile/worker-profile.component';
+import { ChatComponent } from './chat/chat.component';
 
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { LoginInterceptorService } from './services/Autenticacion/login-interceptor.service';
@@ -59,6 +63,11 @@ import { RegistrarClienteComponent } from './registrar-cliente/registrar-cliente
       IngresoTrabajadorComponent,
       RegistrarClienteComponent,
 
+      PerfilTrabajadorComponent,
+      ServiciosOfrecerComponent,
+      WorkerProfileComponent,
+      ChatComponent,
+      
   ],
   imports: [
     BrowserModule,
@@ -76,5 +85,6 @@ import { RegistrarClienteComponent } from './registrar-cliente/registrar-cliente
     provideHttpClient()
   ],
   bootstrap: [AppComponent],
+  
 })
 export class AppModule { }

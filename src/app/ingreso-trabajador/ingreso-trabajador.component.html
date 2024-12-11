@@ -16,70 +16,69 @@
             <i class="fas fa-envelope me-2"></i> Mensajes
           </a>
           <a href="#" class="nav-link d-flex align-items-center">
-            <i class="fas fa-heart me-2"></i> Favoritos
-          </a>
-          <a href="#" class="nav-link d-flex align-items-center">
             <i class="fas fa-calendar-alt me-2"></i> Agenda
           </a>
           <a href="#" class="nav-link d-flex align-items-center">
             <i class="fas fa-tools me-2"></i> Servicios
           </a>
       
-          <!-- Avatar y nombre del usuario -->
-          <div class="d-flex align-items-center ms-3">
-            <img src="\images\hello.gif" alt="Avatar" class="user-avatar me-2" />
-            <span id="user-name" class="text-white"></span>
+          <div class="logout-container d-flex align-items-center ms-3">
+            <button class="btn btn-logout" (click)="logout()">
+              Cerrar Sesión
+            </button>
           </div>
         </nav>
       </header>
   
 
-      <div class="agenda-container"></div>
-    <!-- Mi Agenda -->
-    <h1 class="title">Mi Agenda</h1>
-  
-    <!-- Calendario -->
-    <div class="container my-5">
-      <h2 class="text-center mb-4">Selecciona una fecha</h2>
-      <div class="d-flex justify-content-center">
-        <input
-          type="text"
-          placeholder="Seleccionar fecha"
-          class="form-control w-50"
-          bsDatepicker
-          [(ngModel)]="selectedDate"
-          (ngModelChange)="filterAppointments()"
-        />
+      <div class="container">
+        <div class="agenda-header text-center">
+          <h1>Mi Agenda</h1>
+        </div>
+      
+        <div class="row">
+          <!-- Calendario -->
+          <div class="col-md-6">
+            <div class="calendar">
+              <h2>Septiembre 2024</h2>
+              <table class="table calendar-table">
+                <thead>
+                  <tr>
+                    <th>L</th>
+                    <th>M</th>
+                    <th>M</th>
+                    <th>J</th>
+                    <th>V</th>
+                    <th>S</th>
+                    <th>D</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <!-- Ejemplo de semanas -->
+                  <tr>
+                    <td>28</td>
+                    <td>29</td>
+                    <td>30</td>
+                    <td>31</td>
+                    <td class="selected">1</td>
+                    <td>2</td>
+                    <td>3</td>
+                  </tr>
+                  <!-- Agrega las filas necesarias -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+      
+          <!-- Detalles de la Agenda -->
+          <div class="col-md-6">
+            <div class="agenda-details">
+              <div class="event" *ngFor="let evento of eventos">
+                <div class="event-title">{{ evento.titulo }}</div>
+                <div class="event-time">{{ evento.hora }}</div>
+                <div class="event-location">{{ evento.lugar }}</div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-  
-    <!-- Lista de Actividades -->
-    <div class="activities">
-      <div
-        class="activity"
-        *ngFor="let appointment of filteredAppointments"
-        [ngClass]="{
-          green: appointment.status === 'cumplido',
-          red: appointment.status === 'cancelado',
-          blue: appointment.status === 'pendiente'
-        }"
-      >
-        <h3>{{ appointment.type }}</h3>
-        <p>{{ appointment.date | date: 'fullDate' }} <strong>{{ appointment.time }}</strong></p>
-        <p>{{ appointment.location }}</p>
-      </div>
-    </div>
-  
-    <!-- Detalles -->
-    <div *ngIf="selectedAppointment" class="details">
-      <h2>Detalles</h2>
-      <p><strong>{{ selectedAppointment.client }}</strong></p>
-      <p>{{ selectedAppointment.location }}</p>
-      <p>{{ selectedAppointment.address }}</p>
-      <div class="details-time">
-        <span>{{ selectedAppointment.type }}</span>
-        <strong>{{ selectedAppointment.time }}</strong>
-      </div>
-    </div>
-  
-  
