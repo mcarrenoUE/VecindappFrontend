@@ -1,0 +1,33 @@
+<div class="servicios-container">
+    <!-- Encabezado llamativo -->
+    <div class="introduccion">
+      <h1>¡Conoce nuestros servicios exclusivos!</h1>
+      <p>
+        Nos dedicamos a brindar soluciones rápidas, confiables y profesionales para las necesidades de tu hogar y negocio. 
+        ¡Porque tu satisfacción es nuestra prioridad!
+      </p>
+    </div>
+  
+    <!-- Servicios -->
+    <h2>Nuestros Servicios</h2>
+    <div class="servicios-grid">
+      <div class="servicio-card" *ngFor="let servicio of servicios">
+        <img [src]="servicio.imagen" [alt]="servicio.nombre" />
+        <h3>{{ servicio.nombre }}</h3>
+        <p>{{ servicio.descripcion }}</p>
+        <button>Saber más</button>
+      </div>
+    </div>
+  
+    <!-- Nueva sección: Opiniones de usuarios -->
+    <div class="testimonios-container">
+      <h2>Opiniones de nuestros usuarios</h2>
+      <div class="testimonios-grid">
+        <div class="testimonio-card" *ngFor="let testimonio of testimonios">
+          <p>"{{ testimonio.opinion }}"</p>
+          <h4>- {{ testimonio.nombre }}</h4>
+        </div>
+      </div>
+    </div>
+  </div>
+  

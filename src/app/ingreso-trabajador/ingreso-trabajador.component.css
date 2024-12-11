@@ -80,54 +80,51 @@ header nav ul li a {
     border-radius: 50%;
   }
 
-  .profile {
-    display: flex;
-    align-items: center;
-  }
-  
-  .profile-pic {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    margin-left: 10px;
-  }
-  
-  .activities {
-    display: flex;
-    gap: 10px;
-    margin: 20px 0;
-  }
-  
-  .activity {
-    flex: 1;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  .activity.green {
-    background-color: #d4edda;
-  }
-  
-  .activity.red {
-    background-color: #f8d7da;
-  }
-  
-  .activity.blue {
-    background-color: #d1ecf1;
-  }
-  
-  .details {
+
+
+  /* aqui la agenda */
+  .container {
     margin-top: 20px;
+  }
+  
+  .agenda-header h1 {
+    color: #5a3fa2;
+  }
+  
+  .calendar {
+    border: 1px solid #ddd;
     padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #f9f9f9;
+    border-radius: 8px;
   }
   
-  .details-time {
-    display: flex;
-    justify-content: space-between;
+  .calendar-table th {
+    text-align: center;
+    background-color: #f3f3f3;
   }
   
+  .calendar-table td {
+    text-align: center;
+    padding: 10px;
+  }
+  
+  .calendar-table .selected {
+    background-color: #e0c3f3;
+    font-weight: bold;
+    border-radius: 50%;
+  }
+  
+  .agenda-details .event {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+  }
+  
+  .agenda-details .event-title {
+    font-weight: bold;
+  }
+  
+  .agenda-details .event-time,
+  .agenda-details .event-location {
+    font-size: 0.9rem;
+  }

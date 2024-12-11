@@ -15,9 +15,7 @@ export class InicioComponent {
     // Inicializar el formulario con validaciones
     this.loginForm = this.fb.group({
       email: ['', [Validators.required, Validators.email]],
-      password: [
-        '',
-        [Validators.required, Validators.minLength(8), Validators.maxLength(20)],
+      password: ['',[Validators.required, Validators.minLength(8), Validators.maxLength(20)],
       ],
     });
   }
@@ -33,7 +31,7 @@ export class InicioComponent {
   }
 
   loginWithGoogle(): void {
-    // Abrir ventana de autenticación de Google directamente
+    // Se abre la ventana de autenticación de Google directamente
     this.auth
       .signInWithPopup(new firebase.auth.GoogleAuthProvider())
       .then((result) => {
