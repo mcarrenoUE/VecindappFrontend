@@ -78,11 +78,11 @@ body {
   .perfil-trabajador {
     max-width: 900px;
     margin: 2rem auto;
-    background: #4167D9;
+    background: #fcfdff;
     border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 6px 6px #BA69EC;
     overflow: hidden;
-    color: white;
+    color: rgb(34, 34, 34);
     
   }
   
