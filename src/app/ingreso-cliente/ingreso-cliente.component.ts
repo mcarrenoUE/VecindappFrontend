@@ -5,6 +5,8 @@ import { Component } from '@angular/core';
   templateUrl: './ingreso-cliente.component.html',
   styleUrl: './ingreso-cliente.component.css'
 })
+
+
 export class IngresoClienteComponent {
 
   userName: string = ''; 

@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+import { ModelUbicacion } from '../models/Ubicacion/model-ubicacion';
 
 @Component({
   selector: 'app-clienteubicacion',
@@ -9,6 +11,8 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class ClienteubicacionComponent {
 
   registroUbiForm!: FormGroup;
+  ubicacion : ModelUbicacion;
+
   localidades: string[] = [
     'Usaquén',
     'Chapinero',
@@ -44,8 +48,11 @@ export class ClienteubicacionComponent {
       'Cúcuta'
       ];
 
-      constructor(private fb: FormBuilder) {}
+      constructor(private fb: FormBuilder, private route:Router) {
 
+        const user = JSON.parse(localStorage.getItem('cliente')||'{}');
+        this.ubicacion = new ModelUbicacion('','','','');
+      }
       ngOnInit(): void {
         this.registroUbiForm = this.fb.group({
           direccion: [
@@ -58,8 +65,13 @@ export class ClienteubicacionComponent {
           ],
           localidad: ['', Validators.required],
           ciudad: ['', Validators.required],
+          terminos: [false, Validators.requiredTrue]
+          
         });
+        
       }
+
+    
     
       get direccion() {
         return this.registroUbiForm.get('direccion')!;
@@ -79,6 +91,16 @@ export class ClienteubicacionComponent {
     
       onSubmit(): void {
         if (this.registroUbiForm.valid) {
+          this.ubicacion.direccion = this.registroUbiForm.value.direccion;
+          this.ubicacion.barrio = this.registroUbiForm.value.barrio;
+          this.ubicacion.localidad = this.registroUbiForm.value.localidad;
+          this.ubicacion.ciudad = this.registroUbiForm.value.ciudad;
+
+          localStorage.setItem('ubicacion', JSON.stringify(this.ubicacion));
+
+          
+          this.route.navigate(['crear-usuario']);
+          
           console.log('Formulario enviado:', this.registroUbiForm.value);
         } else {
           this.registroUbiForm.markAllAsTouched();

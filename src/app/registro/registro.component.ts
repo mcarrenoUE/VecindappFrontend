@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { ModelCliente } from '../models/Cliente/model-cliente';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-registro',
@@ -9,8 +11,9 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class RegistroComponent {
 
   registerForm: FormGroup;
+  cliente: ModelCliente;
 
-constructor(private fb: FormBuilder) {
+constructor(private fb: FormBuilder, private router: Router) {
   this.registerForm = this.fb.group(
     {
       nombre: [
@@ -61,6 +64,8 @@ constructor(private fb: FormBuilder) {
       validators: [this.emailsMatchValidator, this.passwordsMatchValidator],
     }
   );
+
+  this.cliente = new ModelCliente('','','');
 }
 
 // Validador para mayor de edad
@@ -83,8 +88,19 @@ passwordsMatchValidator(group: FormGroup) {
   return contrasena === confirmarContrasena ? null : { passwordsMismatch: true };
 }
 
+
+
+
 onRegister() {
   if (this.registerForm.valid) {
+    this.cliente.nombre = this.registerForm.value.nombre;
+    this.cliente.correo = this.registerForm.value.correo;
+    this.cliente.contrasena = this.registerForm.value.contrasena;
+
+    // Guardar el objeto RegistroModel, por ejemplo, en localStorage
+    localStorage.setItem('registro', JSON.stringify(this.cliente));
+    this.router.navigate(['/clienteubicacion']);
+
     console.log('Formulario válido:', this.registerForm.value);
     alert('Registro Exitoso');
   } else {
