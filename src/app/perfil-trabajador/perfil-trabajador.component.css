@@ -74,6 +74,18 @@ body {
     border-radius: 50%;
   }
   
+  .informacion-volver {
+    display: flex;
+    justify-content: flex-end; 
+    align-items: center;
+    font-size: 22px;
+    color: hsl(0, 0%, 100%); 
+    width: 230%; 
+    text-align: right; 
+    padding-right: 0%;
+    
+  }
+  
   /* PERFIL TRABAJADOR */
   .perfil-trabajador {
     max-width: 900px;

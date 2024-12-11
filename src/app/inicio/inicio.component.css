@@ -26,7 +26,6 @@ header {
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
-  /* Alinea los elementos en la parte superior */
   justify-content: space-between;
   padding: 50px;
   height: calc(100vh - 80px);

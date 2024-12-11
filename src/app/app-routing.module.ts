@@ -26,7 +26,7 @@ import { PerfilTrabajadorComponent } from './perfil-trabajador/perfil-trabajador
 
 const routes: Routes = [
 
-  { path: '', component: HomeComponent },
+  { path: 'Home', component: HomeComponent },
   { path: 'inicio', component: InicioComponent},
   { path: 'registro', component: RegistroComponent },
   { path: 'buscar-servicios', component: BuscarServiciosComponent},
