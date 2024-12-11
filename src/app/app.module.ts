@@ -32,6 +32,7 @@ import { PerfilTrabajadorComponent } from './perfil-trabajador/perfil-trabajador
 import { ServiciosOfrecerComponent } from './servicios-ofrecer/servicios-ofrecer.component';
 import { WorkerProfileComponent } from './worker-profile/worker-profile.component';
 import { ChatComponent } from './chat/chat.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -58,6 +59,7 @@ import { ChatComponent } from './chat/chat.component';
       ServiciosOfrecerComponent,
       WorkerProfileComponent,
       ChatComponent,
+      DashboardComponent,
       
   ],
   imports: [
