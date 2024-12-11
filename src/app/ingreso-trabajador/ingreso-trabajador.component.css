@@ -121,7 +121,18 @@ header nav ul li a {
   }
   
   .calendar-table .selected {
-    background-color: #e0c3f3;
+    background-color: #aa4ee7;
+    font-weight: bold;
+    border-radius: 50%;
+  }
+  .calendar-table .selected1 {
+    background-color: red;
+    font-weight: bold;
+    border-radius: 50%;
+  }
+
+  .calendar-table .selected2 {
+    background-color: #00ff62;
     font-weight: bold;
     border-radius: 50%;
   }
@@ -140,4 +151,62 @@ header nav ul li a {
   .agenda-details .event-time,
   .agenda-details .event-location {
     font-size: 0.9rem;
+  }
+
+  .botonrojo{
+
+    background-color: red;
+    color: #ffffff;
+    border-radius: 10px;
+    gap: 10px;
+    text-align: center;
+    align-items: center;
+    border-color: red;
+
+  }
+
+  .botonrojo:hover{
+    background-color: crimson;
+    color:#ddd
+    
+  }
+
+  .botonverde{
+
+    background-color: #00ff62;
+    color: #ffffff;
+    border-radius: 10px;
+    gap: 10px;
+    text-align: center;
+    align-items: center;
+    border-color: #00ff62;
+
+  }
+
+  .botonverde:hover{
+    background-color: rgb(20, 220, 97);
+    color:#ddd
+    
+  }
+
+  .botones{
+    gap: 20px;
+    display: flex;
+  }
+
+  .botonrosado{
+    background: rgb(170, 78, 231);
+    color: #ffffff;
+    border-radius: 10px;
+    gap: 10px;
+    text-align: center;
+    align-items: center;
+    border-color: rgb(170, 78, 231)
+    ;
+  }
+
+  .botonrosado:hover{
+
+    background-color: #aa4ee7;
+    color:#ddd;
   }

@@ -33,6 +33,7 @@ import { PerfilTrabajadorComponent } from './perfil-trabajador/perfil-trabajador
 import { ServiciosOfrecerComponent } from './servicios-ofrecer/servicios-ofrecer.component';
 import { WorkerProfileComponent } from './worker-profile/worker-profile.component';
 import { ChatComponent } from './chat/chat.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { LoginInterceptorService } from './services/Autenticacion/login-interceptor.service';
@@ -67,6 +68,7 @@ import { RegistrarClienteComponent } from './registrar-cliente/registrar-cliente
       ServiciosOfrecerComponent,
       WorkerProfileComponent,
       ChatComponent,
+      DashboardComponent,
       
   ],
   imports: [
